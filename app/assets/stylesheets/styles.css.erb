@@ -1,0 +1,184 @@
+body {
+	background: #D2DFE9;
+}
+
+.container {
+	margin: 20px auto;
+	position: relative;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	line-height: 1.5em;
+}
+
+h1 {
+	color: #313E47;
+}
+
+	h1 span {
+		cursor: pointer;
+	}
+
+h2 {
+	color: #D95594;
+	font-size: 18px;
+}
+
+p,
+dl {
+	margin: 10px 0;
+}
+
+.well {
+	border: solid 1px #CCC;
+	padding: 5px;
+}
+
+/*** Login ***/
+
+.login .container {
+	width: 250px;
+}
+
+.login h1 {
+	margin-bottom: 20px;
+}
+
+.login input[type=text],
+.login input[type=password] {
+	width: 240px;
+}
+
+.login input[type=submit] {
+	float: right;
+	margin-top: 10px;
+	padding: 5px 10px;
+}
+
+/*** Movies ***/
+
+.loading .well {
+	background-image: url('/ui/ajax-loader.gif');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	min-height: 29px;
+}
+
+#movie-search input {
+	display: block;
+	padding: 10px 20px;
+	width: 898px;
+}
+
+.genre-wrap ul,
+.movie-wrap ul {
+	list-style: none;
+	margin-left: 0;
+}
+
+	.genre-wrap li,
+	.movie-wrap li {
+		background: #FFF;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		border: solid 1px #e3e3e3;
+		cursor: pointer;
+		margin: 5px;
+		padding: 10px 20px;
+	}
+
+	.genre-wrap li:hover,
+	.genre-wrap li.active {
+		background: #bada55;
+	}
+
+	.movie-wrap li:hover,
+	.movie-wrap li.active {
+		background: #559FD9;
+	}
+
+	.genre-wrap li.error,
+	.movie-wrap li.error {
+		background: #FFF !important;
+		color: #999;
+		cursor: default;
+	}
+
+	.info-persister {
+		display: none;
+		float: none;
+		position: fixed;
+		top: 10px;
+	}
+
+.info-box {
+	padding: 5px 15px;
+}
+
+	.info-box img {
+		float: right;
+		margin: 8px 0 10px 15px;
+	}
+
+	.info-box dt {
+		float: left;
+		padding: 5px 0 0 5px;
+		width: 100px;
+	}
+
+	.info-box dd {
+		margin: 5px 0;
+		padding: 5px 5px 5px 115px;
+	}
+
+	.info-box dd:nth-child(4n) {
+		background: #F8DCEA;
+	}
+
+		.info-box ul {
+			list-style: none;
+			margin: 0;
+		}
+
+		.info-box .rating {
+			padding-left: 30px;
+			position: relative;
+			width: 70px;
+		}
+
+			.rating:before {
+				background: url('/ui/icon-sprite.png') -48px -164px no-repeat;
+				content: '';
+				display: block;
+				position: absolute;
+					left: 0;
+					top: 1px;
+				width: 24px;
+				height: 24px;
+			}
+
+		.rating-meter,
+		.rating-meter span {
+			display: block;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+		}
+
+		.rating-meter {
+			background: #000;
+			float: right;
+			margin-top: 2px;
+			width: 102px;
+			height: 18px;
+		}
+
+			.rating-meter span {
+				background: #D95594;
+				float: left;
+				margin: 1px;
+				height: 16px;
+			}
+
+

@@ -1,0 +1,142 @@
+<div class="container">
+
+	<h1><span>Movies</span></h1>
+
+	<p>Search for a movie or select a genre.</p>
+
+	<form id="movie-search">
+		<input id="search-input" type="text" placeholder="Search" />
+	</form>
+
+	<div class="row">
+
+		<div class="span4 genre-wrap genres">
+
+			<div class="well">
+
+				<ul id="genre-list"></ul>
+
+			</div>
+
+		</div>
+
+		<div class="span4 movie-wrap">
+
+			<div class="well">
+
+				<ul id="movie-list"></ul>
+
+			</div>
+
+		</div>
+
+		<div class="span4 info-wrap info">
+
+			<div class="well">
+
+				<div class="info-box"></div>
+
+			</div>
+
+		</div>
+
+		<div class="span4 info-wrap info-persister">
+
+			<div class="well">
+
+				<div class="info-box"></div>
+
+			</div>
+
+		</div>
+
+	</div><!-- /.row -->
+
+</div><!-- /.container -->
+
+<script type="text/template" id="info-template">
+
+	<h2>{{= movie_title }}</h2>
+
+	<dl>
+
+		<dt>Seen by Chris</dt>
+		<dd>
+			{{ if(chris == 1) { }}
+				yes
+			{{ } else { }}
+				no
+			{{ } }}
+		</dd>
+
+		<dt>Seen by Sarah</dt>
+		<dd>
+			{{ if(sarah == 1) { }}
+				yes
+			{{ } else { }}
+				no
+			{{ } }}
+		</dd>
+
+		<dt>On Shortlist</dt>
+		<dd>
+			{{ if(shortlist == 1) { }}
+				yes
+			{{ } else { }}
+				no
+			{{ } }}
+		</dd>
+
+		<dt>Genre(s)</dt>
+
+		<dd>
+			<ul>
+				{{ _.each(genres, function (genre) { }}
+
+					<li>{{= genre.genre_name }}</li>
+
+				{{ }); }}
+			</ul>
+		</dd>
+
+	</dl>
+
+</script>
+
+<script type="text/template" id="rt-template">
+
+	<dt class="rating">Rating</dt>
+	<dd>
+		{{= critics_score }}%
+		<span class="rating-meter">
+			<span style="width: {{= critics_score }}px;"></span>
+		</span>
+	</dd>
+
+	<dt>Year</dt>
+	<dd>
+		{{= year }}
+	</dd>
+
+	<dt>Runtime</dt>
+	<dd>
+		{{= runtime }}
+	</dd>
+
+	<dt>MPAA Rating</dt>
+	<dd>
+		{{= mpaa_rating }}
+	</dd>
+
+	<dt>Cast</dt>
+	<dd>
+		<ul>
+			{{ _.each(cast, function (member) { }}
+
+				<li>{{= member.name }}</li>
+
+			{{ }); }}
+		</ul>
+	</dd>
+
+</script>
