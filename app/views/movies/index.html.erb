@@ -56,7 +56,7 @@
 
 <script type="text/template" id="info-template">
 
-	<h2>{{= movie_title }}</h2>
+	<h2>{{= title }}</h2>
 
 	<dl>
 
@@ -93,7 +93,7 @@
 			<ul>
 				{{ _.each(genres, function (genre) { }}
 
-					<li>{{= genre.genre_name }}</li>
+					<li>{{= genre.name }}</li>
 
 				{{ }); }}
 			</ul>

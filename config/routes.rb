@@ -1,5 +1,13 @@
 Movies::Application.routes.draw do
 
+  resources :movies do
+    resources :genres
+  end
+
+  resources :genres do
+    resources :movies
+  end
+
   root to: "Movies#index"
 
   # The priority is based upon order of creation:

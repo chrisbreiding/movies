@@ -1,3 +1,15 @@
+var App = {
+    Views: {},
+    Controllers: {},
+    Collections: {},
+    init: function() {
+        new App.Controllers.Documents();
+        Backbone.history.start();
+    }
+};
+
+//App.init();
+
 _.templateSettings = {
 	interpolate: /\{\{\=(.+?)\}\}/g,
 	evaluate: /\{\{(.+?)\}\}/g
@@ -48,7 +60,7 @@ $(function() {
 
 		model : Genre,
 
-		url : '/data/genres'
+		url : '/genres.json'
 
 	});
 
@@ -98,7 +110,7 @@ $(function() {
 
 		genre : function () {
 
-			movieListView.filterByGenre( this.model.get('slug') );
+			movieListView.filterByGenre( this.model.get('id') );
 
 		}
 
@@ -264,7 +276,7 @@ $(function() {
 
 		render : function () {
 
-			this.$el.html( this.model.get('movie_title') );
+			this.$el.html( this.model.get('title') );
 			return this;
 
 		},
@@ -341,22 +353,23 @@ $(function() {
 
 				$movieWrap.addClass('loading');
 
-				$.get('/data/genre/' + genre, function(data) {
+				$.ajax({
+					url : '/genres/' + genre + '/movies/',
+					success : function(data) {
+						$movieWrap.removeClass('loading');
 
-					$movieWrap.removeClass('loading');
+						movieList.reset(data);
 
-					movieList.reset(data);
-
-					movieCacheList.add({
-						id : genre,
-						movies : data
-					});
-
+						movieCacheList.add({
+							id : genre,
+							movies : data
+						});
+					}
 				});
 
 			}
 
-			MovieApp.navigate('genre/' + genre, {replace : true});
+			//MovieApp.navigate('genre/' + genre, {replace : true});
 
 		}
 
@@ -468,7 +481,7 @@ $(function() {
 
 	});
 
-	var MovieApp = Backbone.Router.extend({
+	var MovieApp = new (Backbone.Router.extend({
 
 		initialize : function () {
 
@@ -479,18 +492,16 @@ $(function() {
 
 		routes : {
 
-			'genre/:genre' : 'genre'
+			'genre/:genre_id' : 'genre'
 
 		},
 
-		genre : function (genre) {
+		genre : function (genre_id) {
 
-			movieListView.filterByGenre(genre);
+			movieListView.filterByGenre(genre_id);
 
 		}
 
-	});
-
-	// new MovieApp();
+	}));
 
 });

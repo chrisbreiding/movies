@@ -11,26 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120418033526) do
+ActiveRecord::Schema.define(:version => 20120419185906) do
 
   create_table "genres", :force => true do |t|
     t.string "name"
     t.string "slug"
   end
 
+  create_table "genres_movies", :id => false, :force => true do |t|
+    t.integer "movie_id"
+    t.integer "genre_id"
+  end
+
   create_table "movies", :force => true do |t|
     t.string   "title"
     t.string   "rt_title"
-    t.boolean  "chris"
-    t.boolean  "sarah"
-    t.boolean  "shortlist"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "movies_genres", :id => false, :force => true do |t|
-    t.integer "movie_id"
-    t.integer "genre_id"
+    t.boolean  "chris",      :default => false
+    t.boolean  "sarah",      :default => false
+    t.boolean  "shortlist",  :default => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
 end
