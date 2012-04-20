@@ -13,4 +13,9 @@
 //= require jquery
 //= require underscore.min
 //= require backbone.min
-//= require_tree .
+//= require setup
+//= require_directory ./models
+//= require_directory ./collections
+//= require_directory ./views
+//= require_directory ./routers
+//= require_directory ./templates

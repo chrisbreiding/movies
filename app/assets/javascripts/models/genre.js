@@ -1,0 +1,1 @@
+App.Models.Genre = Backbone.Model.extend();

@@ -1,33 +1,33 @@
 <dt class="rating">Rating</dt>
 <dd>
-	{{= critics_score }}%
+	<%= critics_score %>%
 	<span class="rating-meter">
-		<span style="width: {{= critics_score }}px;"></span>
+		<span style="width: <%= critics_score %>px;"></span>
 	</span>
 </dd>
 
 <dt>Year</dt>
 <dd>
-	{{= year }}
+	<%= year %>
 </dd>
 
 <dt>Runtime</dt>
 <dd>
-	{{= runtime }}
+	<%= runtime %>
 </dd>
 
 <dt>MPAA Rating</dt>
 <dd>
-	{{= mpaa_rating }}
+	<%= mpaa_rating %>
 </dd>
 
 <dt>Cast</dt>
 <dd>
 	<ul>
-		{{ _.each(cast, function (member) { }}
+		<% _.each(cast, function (member) { %>
 
-			<li>{{= member.name }}</li>
+			<li><%= member.name %></li>
 
-		{{ }); }}
+		<% }); %>
 	</ul>
 </dd>
