@@ -11,8 +11,14 @@ var App = {
 	Routers : {},
 	data : {},
 	init: function() {
-		new App.Routers.App();
+		this.App = new App.Routers.App();
+		Backbone.history.start({ pushState: true });
 	}
+};
+
+App.data.rottenTomatoes = {
+	baseUrl : "http://api.rottentomatoes.com/api/public/v1.0",
+	apiKey : "hedyxeyu7a5yggpbs7jwvsqw"
 };
 
 $(function () {
@@ -45,11 +51,6 @@ $(function () {
 	$window
 		.scroll(infoPersist)
 		.trigger('scroll');
-
-	App.data.rottenTomatoes = {
-		baseUrl : "http://api.rottentomatoes.com/api/public/v1.0",
-		apiKey : "hedyxeyu7a5yggpbs7jwvsqw"
-	};
 
 	App.init();
 

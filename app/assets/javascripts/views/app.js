@@ -18,7 +18,7 @@ App.Views.App = Backbone.View.extend({
 
 		App.Collections.movies.reset();
 
-		MovieApp.navigate('', {replace : true});
+		App.App.navigate('', {replace : true});
 	},
 
 	search : function (e) {

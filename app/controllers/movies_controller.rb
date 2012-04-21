@@ -3,9 +3,14 @@ class MoviesController < ApplicationController
 
 	def index
 		if params[:genre_id]
-			@movies = Genre.find(params[:genre_id]).movies
-			respond_with @movies
+      respond_with Genre.where(slug: params[:genre_id]).first.movies
 		end
 	end
+
+  def show
+    movie = Movie.includes(:genres).find params[:id]
+    movie[:genres] = movie.genres
+    respond_with movie
+  end
 
 end

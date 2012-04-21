@@ -23,10 +23,18 @@ App.Views.Movie = Backbone.View.extend({
 
 	showInfo : function (e) {
 		$('#movie-list li').removeClass('active');
-
 		this.$el.addClass('active');
 
-		new App.Views.Info({ model : this.model });
+		$.ajax({
+			url : '/movies/' + this.model.get('id'),
+			success : function (data) {
+				var infoCollection = App.Collections.info.add(data),
+					newOne = infoCollection.at( infoCollection.length - 1 );
+
+				newOne.set({ rt_data : true });
+console.log(newOne);
+			}
+		});
 	}
 
 });

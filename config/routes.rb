@@ -8,7 +8,9 @@ Movies::Application.routes.draw do
     resources :movies
   end
 
-  root to: "Movies#index"
+  root to: "movies#index"
+
+  match '*path', to: 'movies#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

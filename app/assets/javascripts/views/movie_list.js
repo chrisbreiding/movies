@@ -61,7 +61,7 @@ App.Views.MovieList = Backbone.View.extend({
 
 		}
 
-		//MovieApp.navigate('genre/' + genre, {replace : true});
+		App.App.navigate('genre/' + genre, {replace : true});
 	}
 
 });
