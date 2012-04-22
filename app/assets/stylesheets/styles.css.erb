@@ -20,18 +20,12 @@ h1 {
 	}
 
 h2 {
-	color: #D95594;
 	font-size: 18px;
 }
 
 p,
 dl {
 	margin: 10px 0;
-}
-
-.well {
-	border: solid 1px #CCC;
-	padding: 5px;
 }
 
 /*** Login ***/
@@ -70,6 +64,26 @@ dl {
 	width: 898px;
 }
 
+.well {
+	border: solid 1px;
+	padding: 5px;
+}
+
+.genre-wrap .well {
+	background: #A5C440;
+	border-color: #91AC39;
+}
+
+.movie-wrap .well {
+	background: #458DC4;
+	border-color: #2C72A8;
+}
+
+.info-wrap .well {
+	background: #D95594;
+	border-color: #B33270;
+}
+
 .genre-wrap ul,
 .movie-wrap ul {
 	list-style: none;
@@ -78,24 +92,32 @@ dl {
 
 	.genre-wrap li,
 	.movie-wrap li {
-		background: #FFF;
 		-moz-border-radius: 3px;
 		-webkit-border-radius: 3px;
 		border-radius: 3px;
-		border: solid 1px #e3e3e3;
+		border: solid 1px;
 		cursor: pointer;
 		margin: 5px;
 		padding: 10px 20px;
 	}
 
-	.genre-wrap li:hover,
-	.genre-wrap li.active {
-		background: #bada55;
+	.genre-wrap li {
+		background: #BADA55;
+		border-color: #91AC39;
 	}
 
-	.movie-wrap li:hover,
-	.movie-wrap li.active {
+	.movie-wrap li {
 		background: #559FD9;
+		border-color: #2C72A8;
+	}
+
+	.genre-wrap li:hover,
+	.genre-wrap li:focus,
+	.genre-wrap li.active,
+	.movie-wrap li:hover,
+	.movie-wrap li:focus,
+	.movie-wrap li.active {
+		background: #FFF;
 	}
 
 	.genre-wrap li.error,
@@ -113,29 +135,54 @@ dl {
 	}
 
 .info-box {
-	padding: 5px 15px;
+	padding: 10px;
 }
 
+	.info-box h2 {
+		background: #F8DCEA;
+		-webkit-border-radius: 3px 3px 0 0;
+		-moz-border-radius: 3px 3px 0 0;
+		border-radius: 3px 3px 0 0;
+		margin: 0;
+		padding: 5px;
+	}
+
 	.info-box img {
+		-moz-border-radius-topright: 3px;
+		-webkit-border-top-right-radius: 3px;
+		border-top-right-radius: 3px;
 		float: right;
-		margin: 8px 0 10px 15px;
+		margin: 0 0 10px 15px;
+	}
+
+	.info-box dl {
+		margin: 0;
 	}
 
 	.info-box dt {
 		float: left;
-		padding: 5px 0 0 5px;
+		padding: 7px 0 0 5px;
 		width: 100px;
 	}
 
 	.info-box dd {
-		margin: 5px 0;
-		padding: 5px 5px 5px 115px;
+		margin-left: 0;
+		padding: 7px 5px 7px 115px;
+	}
+
+	.info-box dd:nth-child(2n) {
+		background: #FFF;
 	}
 
 	.info-box dd:nth-child(4n) {
 		background: #F8DCEA;
 	}
 
+	.info-box dd:last-child {
+		-webkit-border-radius: 0 0 3px 3px;
+		-moz-border-radius: 0 0 3px 3px;
+		border-radius: 0 0 3px 3px;
+	}
 		.info-box ul {
 			list-style: none;
 			margin: 0;

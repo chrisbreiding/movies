@@ -32,7 +32,6 @@ App.Views.Movie = Backbone.View.extend({
 					newOne = infoCollection.at( infoCollection.length - 1 );
 
 				newOne.set({ rt_data : true });
-console.log(newOne);
 			}
 		});
 	}

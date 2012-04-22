@@ -16,8 +16,7 @@ App.Views.MovieList = Backbone.View.extend({
 
 	addOne : function (movie) {
 		var view = new App.Views.Movie({
-			model	: movie,
-			id		: 'm' + movie.get('movie_id')
+			model	: movie
 		});
 
 		$('#movie-list').append( view.render().el );
