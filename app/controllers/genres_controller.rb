@@ -2,7 +2,11 @@ class GenresController < ApplicationController
 	respond_to :json
 
 	def index
-		@genres = Genre.all
-		respond_with @genres
+    if params[:movie_id]
+      respond_with Movie.find(params[:movie_id]).genres
+    else
+  		respond_with Genre.all
+    end
 	end
+
 end

@@ -2,16 +2,18 @@ App.Views.Info = Backbone.View.extend({
 
 	el : '.info-box',
 
-	template : _.template( $('#info-template').html() ), //JST['templates/info'],
+	template : JST['templates/info'],
 
 	initialize : function () {
-		this.render();
+		App.Collections.info.on('add', this.render, this);
+		//this.render();
 	},
 
-	render : function () {
-		this.$el.html( this.template( this.model.toJSON() ) );
+	render : function (model) {
+		this.model = model;
+		this.$el.html( this.template( model.toJSON() ) );
 
-		if( !!this.model.get('rt_data') ) {
+		if( !!model.get('rt_data') ) {
 			this.showRTInfo();
 		} else {
 			this.getRTInfo();
@@ -25,7 +27,8 @@ App.Views.Info = Backbone.View.extend({
 			byId = false,
 			query = this.model.get('rt_title');
 
-		if ( query.slice(0,3) == '$id' ) {	// If flagged for special search by $id
+		if ( query.slice(0,3) == '$id' ) {
+			// If flagged for special search by $id
 			byId = true,
 			query = '/movies/' + query.match(/\b\d+\b/) + '.json?';
 		} else {
@@ -42,23 +45,14 @@ App.Views.Info = Backbone.View.extend({
 					runtime = Math.floor(movie.runtime / 60) + ':' + ( minutes < 10 ? '0' : '' ) + minutes;
 
 				self.model.set({
-
 					rt_data : {
-
 						critics_score : movie.ratings.critics_score,
-
 						year : movie.year,
-
 						runtime : runtime,
-
 						mpaa_rating : movie.mpaa_rating,
-
 						cast : movie.abridged_cast,
-
 						poster : movie.posters.thumbnail
-
 					}
-
 				});
 
 				self.showRTInfo();
@@ -70,9 +64,11 @@ App.Views.Info = Backbone.View.extend({
 		var template = JST['templates/rt'],
 			data = this.model.get('rt_data');
 
-		$('.info-box dl').append(_.template(template, data));
-
-		$('.info-box').prepend('<img src="' + rtData.poster + '" />');
+		$('.info-box dl').append( template(data) );
+		$('.info-box').prepend('<img src="' + data.poster + '" />');
 	}
 
 });
+
+App.Views.info = new App.Views.Info();
+

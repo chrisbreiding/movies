@@ -18,8 +18,7 @@ App.Views.GenreList = Backbone.View.extend({
 
 	addOne : function (genre) {
 		var view = new App.Views.Genre({
-			model	: genre,
-			id		: 'g' + genre.get('id')
+			model	: genre
 		});
 
 		$('#genre-list').append( view.render().el );
@@ -27,7 +26,6 @@ App.Views.GenreList = Backbone.View.extend({
 
 	addAll : function () {
 		App.Collections.genres.each(this.addOne);
-		this.$el.trigger('genres-loaded');
 	}
 
 });

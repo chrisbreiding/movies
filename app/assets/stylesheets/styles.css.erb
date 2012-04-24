@@ -20,18 +20,12 @@ h1 {
 	}
 
 h2 {
-	color: #D95594;
 	font-size: 18px;
 }
 
 p,
 dl {
 	margin: 10px 0;
-}
-
-.well {
-	border: solid 1px #CCC;
-	padding: 5px;
 }
 
 /*** Login ***/
@@ -70,6 +64,12 @@ dl {
 	width: 898px;
 }
 
+.well {
+	background: #f5f5f5;
+	border: solid 1px #CCC;
+	padding: 5px;
+}
+
 .genre-wrap ul,
 .movie-wrap ul {
 	list-style: none;
@@ -89,11 +89,13 @@ dl {
 	}
 
 	.genre-wrap li:hover,
+	.genre-wrap li:focus,
 	.genre-wrap li.active {
-		background: #bada55;
+		background: #BADA55;
 	}
 
 	.movie-wrap li:hover,
+	.movie-wrap li:focus,
 	.movie-wrap li.active {
 		background: #559FD9;
 	}
@@ -113,29 +115,47 @@ dl {
 	}
 
 .info-box {
-	padding: 5px 15px;
+	margin: 10px;
 }
 
+	.info-box h2 {
+		color: #D95594;
+		margin: 0;
+		padding: 5px 10px;
+	}
+
 	.info-box img {
+		-moz-border-radius-topright: 3px;
+		-webkit-border-top-right-radius: 3px;
+		border-top-right-radius: 3px;
 		float: right;
-		margin: 8px 0 10px 15px;
+		margin: 5px 0 10px 15px;
+	}
+
+	.info-box dl {
+		margin: 0;
 	}
 
 	.info-box dt {
 		float: left;
-		padding: 5px 0 0 5px;
+		padding: 7px 0 0 10px;
 		width: 100px;
 	}
 
 	.info-box dd {
-		margin: 5px 0;
-		padding: 5px 5px 5px 115px;
+		margin-left: 0;
+		padding: 7px 5px 7px 115px;
 	}
 
 	.info-box dd:nth-child(4n) {
 		background: #F8DCEA;
 	}
 
+	.info-box dd:last-child {
+		-webkit-border-radius: 0 0 3px 3px;
+		-moz-border-radius: 0 0 3px 3px;
+		border-radius: 0 0 3px 3px;
+	}
 		.info-box ul {
 			list-style: none;
 			margin: 0;
@@ -148,12 +168,12 @@ dl {
 		}
 
 			.rating:before {
-				background: url('/ui/icon-sprite.png') -48px -164px no-repeat;
+				background: url(<%= asset_path('icon-sprite.png') %>) -48px -164px no-repeat;
 				content: '';
 				display: block;
 				position: absolute;
-					left: 0;
-					top: 1px;
+					left: 4px;
+					top: 3px;
 				width: 24px;
 				height: 24px;
 			}

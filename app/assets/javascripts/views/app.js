@@ -18,7 +18,7 @@ App.Views.App = Backbone.View.extend({
 
 		App.Collections.movies.reset();
 
-		MovieApp.navigate('', {replace : true});
+		App.Routers.app.navigate('', {replace : true});
 	},
 
 	search : function (e) {
@@ -92,7 +92,7 @@ App.Views.App = Backbone.View.extend({
 
 		}
 
-		//MovieApp.navigate('', {replace : true});
+		App.Routers.app.navigate('', {replace : true});
 	}
 
 });
