@@ -16,8 +16,8 @@ App.Collections.Movies = Backbone.Collection.extend({
 		this.each(this.addOne);
 	},
 
-	filterByGenre : function (genre) {
-		var cachedMoviesModel = App.Collections.cachedMovies.get(genre),
+	filterByGenre : function (genre_slug) {
+		var cachedMoviesModel = App.Collections.cachedMovies.get(genre_slug),
 			$movieWrap = $('.movie-wrap');
 
 		$('#movie-list').html('');
@@ -31,14 +31,14 @@ App.Collections.Movies = Backbone.Collection.extend({
 			$movieWrap.addClass('loading');
 
 			$.ajax({
-				url : '/genres/' + genre + '/movies/',
+				url : '/genres/' + genre_slug + '/movies/',
 				success : function(data) {
 					$movieWrap.removeClass('loading');
 
 					App.Collections.movies.reset(data);
 
 					App.Collections.cachedMovies.add({
-						id : genre,
+						id : genre_slug,
 						movies : data
 					});
 				}
@@ -46,7 +46,7 @@ App.Collections.Movies = Backbone.Collection.extend({
 
 		}
 
-		App.Routers.app.navigate('genre/' + genre, {replace : true});
+		App.Routers.app.navigate('genre/' + genre_slug, {replace : true});
 	}
 
 });

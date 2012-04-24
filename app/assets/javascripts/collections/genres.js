@@ -5,8 +5,10 @@ App.Collections.Genres = Backbone.Collection.extend({
 	url : '/genres.json',
 
 	initialize : function () {
-		this.on('add',   this.addOne, this);
-		this.on('reset', this.addAll, this);
+		this.bind('add',   this.addOne, this);
+		this.bind('reset', this.addAll, this);
+
+		this.views = {};
 
 		this.fetch();
 	},
@@ -15,12 +17,14 @@ App.Collections.Genres = Backbone.Collection.extend({
 		var view = new App.Views.Genre({
 			model : genre
 		});
-
-		$('#genre-list').append( view.render().el );
+//console.log(genre);
+		genre.collection.views[genre.id] = view;
+//console.log(genre.collection.views);
 	},
 
 	addAll : function () {
 		this.each(this.addOne);
+		App.dispatcher.trigger('genres_loaded');
 	}
 
 });

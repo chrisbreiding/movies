@@ -16,6 +16,8 @@ var App = {
 	}
 };
 
+App.dispatcher = _.clone(Backbone.Events);
+
 App.data.rottenTomatoes = {
 	baseUrl : "http://api.rottentomatoes.com/api/public/v1.0",
 	apiKey : "hedyxeyu7a5yggpbs7jwvsqw"

@@ -5,11 +5,18 @@ App.Routers.App = Backbone.Router.extend({
 	},
 
 	routes : {
-		'genre/:genre' : 'genre'
+		'genre/:genre_slug' : 'genre'
 	},
 
-	genre : function (genre) {
-		App.Collections.movies.filterByGenre(genre);
+	genre : function (genre_slug) {
+		App.dispatcher.on('genres_loaded', function () {
+			var genre = App.Collections.genres.filter(function (model) { 
+				return model.get('slug') === genre_slug; 
+			})[0];
+			genre.collection.views[genre.id].setActive();
+		});
+
+		App.Collections.movies.filterByGenre(genre_slug);
 	}
 
 });

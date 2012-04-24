@@ -1,1 +1,0 @@
-App.Models.Info = Backbone.Model.extend();
