@@ -9,7 +9,7 @@ App.Routers.App = Backbone.Router.extend({
 	},
 
 	genre : function (genre) {
-		App.Views.movieList.filterByGenre(genre);
+		App.Collections.movies.filterByGenre(genre);
 	}
 
 });

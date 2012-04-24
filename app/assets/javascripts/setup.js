@@ -11,7 +11,7 @@ var App = {
 	Routers : {},
 	data : {},
 	init: function() {
-		this.App = new App.Routers.App();
+		this.Routers.app = new App.Routers.App();
 		Backbone.history.start({ pushState: true });
 	}
 };

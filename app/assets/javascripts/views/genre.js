@@ -24,7 +24,9 @@ App.Views.Genre = Backbone.View.extend({
 	},
 
 	genre : function () {
-		App.Views.movieList.filterByGenre( this.model.get('slug') );
+		$('#genre-list li').removeClass('active');
+		this.$el.addClass('active');
+		App.Collections.movies.filterByGenre( this.model.get('slug') );
 	}
 
 });
