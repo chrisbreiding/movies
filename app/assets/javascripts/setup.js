@@ -15,6 +15,11 @@ var App = {
 	}
 };
 
+App.data.rottenTomatoes = {
+	baseUrl : "http://api.rottentomatoes.com/api/public/v1.0",
+	apiKey : "hedyxeyu7a5yggpbs7jwvsqw"
+};
+
 $(function () {
 
 	var $window = $(window),
@@ -23,7 +28,6 @@ $(function () {
 				$elPersister	= $(el + '-persister');
 
 			return function () {
-
 				var offset		= $el.offset(),
 					scrollTop	= $window.scrollTop();
 
@@ -36,20 +40,13 @@ $(function () {
 					$el.css({ visibility : 'visible' });
 					$elPersister.hide();
 				}
-
 			};
-
 		},
 		infoPersist = scrollPersist('.info');
 
 	$window
 		.scroll(infoPersist)
 		.trigger('scroll');
-
-	App.data.rottenTomatoes = {
-		baseUrl : "http://api.rottentomatoes.com/api/public/v1.0",
-		apiKey : "hedyxeyu7a5yggpbs7jwvsqw"
-	};
 
 	App.init();
 
