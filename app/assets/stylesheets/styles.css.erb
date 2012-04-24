@@ -58,11 +58,36 @@ dl {
 	min-height: 29px;
 }
 
-#movie-search input {
-	display: block;
-	padding: 10px 20px;
-	width: 898px;
+.movie-search {
+	position: relative;
 }
+
+	.movie-search input {
+		display: block;
+		padding: 10px 20px;
+		width: 898px;
+	}
+
+	.movie-search a {
+		background: url(<%= asset_path('icon-sprite.png') %>) -45px -45px no-repeat;
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+		border-radius: 50px;
+		display: block;
+		opacity: 0.4;
+		outline: none;
+		position: absolute;
+			top: 5px;
+			right: 5px;
+		text-indent: -9999px;
+		width: 30px;
+		height: 30px;
+	}
+
+	.movie-search a:hover,
+	.movie-search a:focus {
+		background-color: #d3d3d3;
+	}
 
 .well {
 	background: #f5f5f5;

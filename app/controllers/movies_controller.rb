@@ -13,4 +13,8 @@ class MoviesController < ApplicationController
     respond_with movie
   end
 
+  def search
+    respond_with Movie.where("title LIKE ?", "%#{params[:query]}%")
+  end
+
 end

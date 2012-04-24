@@ -2,70 +2,68 @@ App.Views.App = Backbone.View.extend({
 
 	el : '.container',
 
+	initialize : function () {
+		this.$searchInput = $('#search-input');
+		this.$genreList = $('#genre-list');
+		this.$movieList = $('#movie-list');
+		this.$movieWrap = $('.movie-wrap');
+	},
+
 	events : {
-		'click h1 span' : 'clear',
-		'submit #movie-search' : 'search'
+		'click h1 span'			: 'clear',
+		'submit #movie-search'	: 'search',
+		'click #clear-search'	: 'clearSearch'
 	},
 
 	clear : function () {
-		$('#search-input').val('');
-
-		$('#genre-list').find('li').show();
+		this.$searchInput.val('');
+		this.$genreList.find('li').show();
+		this.$movieList.html(''); 
+		$('.info-box').html('');
 
 		$('.active').removeClass('active');
 
-		$('#movie-list, .info-box').html('');
-
 		App.Collections.movies.reset();
-
 		App.Routers.app.navigate('', {replace : true});
 	},
 
 	search : function (e) {
 		e.preventDefault();
 
-		var query = $('#search-input').val(),
-			regexQuery = new RegExp(query, 'i'),
-			$genreList = $('#genre-list'),
-			$movieWrap = $('.movie-wrap'),
-			$movieList = $('#movie-list');
+		var self = this,
+			query = this.$searchInput.val(),
+			regexQuery = new RegExp(query, 'i');
 
 		$('.active').removeClass('active');
 
-		$genreList.find('.error').remove();
+		this.$genreList.find('.error').remove();
 
-		$movieWrap.addClass('loading');
+		this.$movieWrap.addClass('loading');
 
-		$movieList.html('');
+		this.$movieList.html('');
 
 		if(query !== '') {
 
 			// movie search
 			$.ajax({
 
-				url : '/data/search/' + query,
+				url : '/search/' + query,
 
 				success : function (data) {
-
-					$movieWrap.removeClass('loading');
-
+					self.$movieWrap.removeClass('loading');
 					App.Collections.movies.reset(data);
-
 				},
 
 				error : function (jqXHR, textStatus, errorThrown) {
-
-					$movieWrap.removeClass('loading');
-
+					self.$movieWrap.removeClass('loading');
 					App.Collections.movies.reset();
-
-					$movieList.append('<li class="error">No matching movies</li>');
+					self.$movieList.append('<li class="error">No matching movies</li>');
 				}
 
 			});
 
 			// genre search
-			$genreList.find('li').each(function(index) {
+			this.$genreList.find('li').each(function(index) {
 
 				var $this = $(this),
 					title = $this.html();
@@ -78,21 +76,23 @@ App.Views.App = Backbone.View.extend({
 
 			});
 
-			if( $genreList.find('li:visible').length === 0 ) {
-				$genreList.append('<li class="error">No matching genres</li>');
+			if( this.$genreList.find('li:visible').length === 0 ) {
+				this.$genreList.append('<li class="error">No matching genres</li>');
 			}
 
 		} else {
-
-			$genreList.find('li').show();
-
-			$movieWrap.removeClass('loading');
-
-			$movieList.html('');
-
+			this.clearSearch();
 		}
 
 		App.Routers.app.navigate('', {replace : true});
+	},
+
+	clearSearch : function (e) {
+		if(e) e.preventDefault();
+		this.$searchInput.val('')
+		this.$genreList.find('li').show();
+		this.$movieWrap.removeClass('loading');
+		this.$movieList.html('');
 	}
 
 });

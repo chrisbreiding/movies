@@ -17,9 +17,7 @@ App.Collections.Genres = Backbone.Collection.extend({
 		var view = new App.Views.Genre({
 			model : genre
 		});
-//console.log(genre);
 		genre.collection.views[genre.id] = view;
-//console.log(genre.collection.views);
 	},
 
 	addAll : function () {

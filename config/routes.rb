@@ -10,6 +10,7 @@ Movies::Application.routes.draw do
 
   root to: "movies#index"
 
+  match '/search/:query', to: 'movies#search'
   match '*path', to: 'movies#index'
 
   # The priority is based upon order of creation:
