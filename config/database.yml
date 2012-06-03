@@ -25,4 +25,4 @@ production:
   pool: 5
   username: movies_rails
   password: MdUvrIxJO37hoi
-  socket: /tmp/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
