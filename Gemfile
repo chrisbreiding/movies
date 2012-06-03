@@ -38,3 +38,6 @@ gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+# debug notifications by email
+gem 'exception_notification', :require => 'exception_notifier'
