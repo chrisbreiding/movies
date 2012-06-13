@@ -1,9 +1,3 @@
-
-_.templateSettings = {
-	interpolate: /\{\{\=(.+?)\}\}/g,
-	evaluate: /\{\{(.+?)\}\}/g
-};
-
 var App = {
 	Models : {},
 	Collections : {},
