@@ -1,6 +1,8 @@
 App.Views.App = Backbone.View.extend({
 
-	el : '.container',
+	el : 'body',
+
+    editTemplate : JST['templates/edit'],
 
 	initialize : function () {
 		this.$searchInput = $('#search-input');
@@ -10,15 +12,19 @@ App.Views.App = Backbone.View.extend({
 	},
 
 	events : {
-		'click h1 span'			: 'clear',
+		'click h1 span'			: 'home',
 		'submit #movie-search'	: 'search',
-		'click #clear-search'	: 'clearSearch'
+		'click #clear-search'	: 'clearSearch',
+        'click .add-movie'      : 'addMovie',
+        'submit #add-movie-form': 'createMovie',
+        'click #create-movie'   : 'createMovie',
+        'click #cancel-create'  : 'cancelCreate'
 	},
 
-	clear : function () {
+	home : function () {
 		this.$searchInput.val('');
 		this.$genreList.find('li').show();
-		this.$movieList.html(''); 
+		this.$movieList.html('');
 		$('.info-box').html('');
 
 		$('.active').removeClass('active');
@@ -89,10 +95,32 @@ App.Views.App = Backbone.View.extend({
 
 	clearSearch : function (e) {
 		if(e) e.preventDefault();
-		this.$searchInput.val('')
+		this.$searchInput.val('');
 		this.$genreList.find('li').show();
 		this.$movieWrap.removeClass('loading');
 		this.$movieList.html('');
-	}
+	},
+
+    addMovie : function (e) {
+        e.preventDefault();
+        $( this.editTemplate() ).appendTo('body').fadeIn();
+    },
+
+    createMovie : function (e) {
+        e.preventDefault();
+
+        // create the movie
+
+        this.removeLightbox();
+    },
+
+    cancelCreate : function (e) {
+        e.preventDefault();
+        this.removeLightbox();
+    },
+
+    removeLightbox : function () {
+        $('#lightbox').remove();
+    }
 
 });
