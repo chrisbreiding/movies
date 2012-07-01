@@ -1,19 +1,19 @@
 var App = {
-    Models         : {},
-    Collections    : {},
-    Views          : {},
-    Routers        : {},
-    dispatcher     : _.clone(Backbone.Events),
-    data           : {
-                        rottenTomatoes : {
-                            baseUrl : "http://api.rottentomatoes.com/api/public/v1.0",
-                            apiKey : "hedyxeyu7a5yggpbs7jwvsqw"
-                        }
-                    },
-    init           : function() {
-                        this.Routers.app = new App.Routers.App();
-                        Backbone.history.start({ pushState: true });
-                    }
+    Models : {},
+    Collections : {},
+    Views : {},
+    Routers : {},
+    dispatcher : _.clone(Backbone.Events),
+    data : {
+        rottenTomatoes : {
+            baseUrl : "http://api.rottentomatoes.com/api/public/v1.0",
+            apiKey : "hedyxeyu7a5yggpbs7jwvsqw"
+        }
+    },
+    init : function() {
+        this.Routers.app = new App.Routers.App();
+        Backbone.history.start({ pushState: true });
+    }
 };
 
 $(function () {

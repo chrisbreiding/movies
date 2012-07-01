@@ -236,7 +236,7 @@ dl {
                         height: 16px;
                     }
 
-            a.add-movie {
+            a.tab {
                 background: #e3e3e3;
                 -moz-border-radius: 0 3px 3px 0;
                 -webkit-border-radius: 0 3px 3px 0;
@@ -246,21 +246,28 @@ dl {
                 padding: 3px;
                 position: absolute;
                     right: -22px;
-                    top: 3px;
                 text-decoration: none;
             }
 
-            a.add-movie:hover,
-            a.add-movie:focus {
+            .add-movie {
+                top: 2px;
+            }
+
+            .edit-movie {
+                top: 31px;
+            }
+
+            a.tab:hover,
+            a.tab:focus {
                 background: #FFF;
             }
 
-                .add-movie i {
+                .tab i {
                     opacity: 0.7
                 }
 
-                .add-movie:hover i,
-                .add-movie:focus i {
+                .tab:hover i,
+                .tab:focus i {
                     opacity: 1.0;
                 }
 
@@ -273,7 +280,7 @@ dl {
     height: 100%;
 }
 
-    .add-movie-form {
+    .edit-movie-form {
         background: #FFF;
         -moz-border-radius: 3px;
         -webkit-border-radius: 3px;

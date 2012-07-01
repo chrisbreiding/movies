@@ -2,11 +2,17 @@ App.Collections.Movies = Backbone.Collection.extend({
 
 	model : App.Models.Movie,
 
+    url : '/movies.json',
+
 	initialize : function () {
 		this.on('add',   this.addOne, this);
 		this.on('reset', this.addAll, this);
 		// this.on('all',   this.render, this);
 	},
+
+    comparator : function (movie) {
+        return movie.get('title');
+    },
 
 	addOne : function (movie) {
 		new App.Views.Movie({ model : movie });

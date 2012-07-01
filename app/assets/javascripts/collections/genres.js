@@ -13,6 +13,10 @@ App.Collections.Genres = Backbone.Collection.extend({
 		this.fetch();
 	},
 
+    comparator : function (genre) {
+        return genre.get('slug');
+    },
+
 	addOne : function (genre) {
 		var view = new App.Views.Genre({
 			model : genre

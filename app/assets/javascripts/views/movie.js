@@ -12,8 +12,8 @@ App.Views.Movie = Backbone.View.extend({
 		this.bind('genres_ready', this.render, this);
 		this.bind('rt_ready', this.render, this);
 
-		//this.model.on('change', this.render, this);
-		//this.model.on('destroy', this.remove, this);
+		this.model.on('change', this.render, this);
+		this.model.on('destroy', this.remove, this);
 	},
 
 	events : {
@@ -21,7 +21,7 @@ App.Views.Movie = Backbone.View.extend({
 	},
 
 	render : function () {
-		$('.info-box').html('');
+		this.remove();
 		$('.info').addClass('loading');
 
 		if( !this.model.get('genres') ) {
@@ -34,7 +34,12 @@ App.Views.Movie = Backbone.View.extend({
 	},
 
 	remove : function () {
+        $('.info-box').html('');
 	},
+
+    cancel : function (e) {
+        e.preventDefault();
+    },
 
 	showInfo : function (e) {
 		$('#movie-list li').removeClass('active');
@@ -42,7 +47,11 @@ App.Views.Movie = Backbone.View.extend({
 
 		$('.info').removeClass('loading');
 
+        $('.edit-movie').remove();
+
 		$('.info-box').html( this.template( this.model.toJSON() ) );
+
+        this.addEditTab();
 	},
 
 	getGenres : function () {
@@ -93,6 +102,15 @@ App.Views.Movie = Backbone.View.extend({
 				self.trigger('rt_ready');
 			}
 		});
-	}
+	},
+
+    addEditTab : function () {
+        $('<a href="#" class="tab edit-movie" title="Edit Movie"><i class="icon-edit"></i></a>').appendTo('.info-box').on('click', _.bind(this.edit, this));
+    },
+
+    edit : function (e) {
+        e.preventDefault();
+        new App.Views.EditMovie({ model : this.model });
+    }
 
 });

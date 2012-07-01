@@ -8,9 +8,27 @@ class MoviesController < ApplicationController
 	end
 
   def show
-    movie = Movie.includes(:genres).find params[:id]
-    movie[:genres] = movie.genres
-    respond_with movie
+    respond_with Movie.find(params[:id]).includes(:genres)
+  end
+
+  def create
+    movie = Movie.new(params[:movie])
+
+    if movie.save
+      respond_with movie
+    else
+      respond_with movie.errors
+    end
+  end
+
+  def update
+    movie = Movie.find(params[:id])
+
+    if movie.update_attributes(params[:movie])
+      respond_with movie
+    else
+      respond_with movie.errors
+    end
   end
 
   def search

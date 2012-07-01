@@ -2,8 +2,6 @@ App.Views.App = Backbone.View.extend({
 
 	el : 'body',
 
-    editTemplate : JST['templates/edit'],
-
 	initialize : function () {
 		this.$searchInput = $('#search-input');
 		this.$genreList = $('#genre-list');
@@ -15,10 +13,7 @@ App.Views.App = Backbone.View.extend({
 		'click h1 span'			: 'home',
 		'submit #movie-search'	: 'search',
 		'click #clear-search'	: 'clearSearch',
-        'click .add-movie'      : 'addMovie',
-        'submit #add-movie-form': 'createMovie',
-        'click #create-movie'   : 'createMovie',
-        'click #cancel-create'  : 'cancelCreate'
+        'click .add-movie'      : 'addMovie'
 	},
 
 	home : function () {
@@ -58,12 +53,15 @@ App.Views.App = Backbone.View.extend({
 				success : function (data) {
 					self.$movieWrap.removeClass('loading');
 					App.Collections.movies.reset(data);
+
+                    if( self.$movieList.find('li:visible').length === 0 ) {
+                        self.$movieList.append('<li class="error">No matching movies</li>');
+                    }
 				},
 
 				error : function (jqXHR, textStatus, errorThrown) {
 					self.$movieWrap.removeClass('loading');
 					App.Collections.movies.reset();
-					self.$movieList.append('<li class="error">No matching movies</li>');
 				}
 
 			});
@@ -103,24 +101,7 @@ App.Views.App = Backbone.View.extend({
 
     addMovie : function (e) {
         e.preventDefault();
-        $( this.editTemplate() ).appendTo('body').fadeIn();
-    },
-
-    createMovie : function (e) {
-        e.preventDefault();
-
-        // create the movie
-
-        this.removeLightbox();
-    },
-
-    cancelCreate : function (e) {
-        e.preventDefault();
-        this.removeLightbox();
-    },
-
-    removeLightbox : function () {
-        $('#lightbox').remove();
+        new App.Views.EditMovie({ model : new App.Models.Movie() });
     }
 
 });

@@ -1,0 +1,27 @@
+<form id="edit-movie-form" class="edit-movie-form clearfix">
+
+    <div id="title-control" class="control-group">
+        <label for="title">Title</label>
+        <input id="title" class="span4" name="title" type="text" value="<%= title %>" />
+    </div>
+
+    <label class="checkbox" for="chris">
+        <input id="chris" name="chris" type="checkbox" <%= chris %>> Seen By Chris?
+    </label>
+
+    <label class="checkbox" for="sarah">
+        <input id="sarah" name="sarah" type="checkbox" <%= sarah %>> Seen By Sarah?
+    </label>
+
+    <label class="checkbox" for="shortlist">
+        <input id="shortlist" name="shortlist" type="checkbox" <%= shortlist %>> Add to Shortlist?
+    </label>
+
+    <div class="form-actions">
+        <button id="save" class="btn btn-primary" type="submit">
+            <%= button %>
+        </button>
+        <button id="cancel" class="btn">Cancel</button>
+    </div>
+
+</form>
