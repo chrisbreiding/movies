@@ -13,6 +13,8 @@
 //= require jquery
 //= require underscore.min
 //= require backbone.min
+//= require backbone-relational
+//= require chosen.jquery.min
 //= require setup
 //= require_directory ./templates
 //= require_directory ./models

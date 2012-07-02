@@ -1,10 +1,11 @@
-App.Models.Movie = Backbone.Model.extend({
+App.Models.Movie = Backbone.RelationalModel.extend({
 
-    url : function() {
-        var base = 'movies';
-        if (this.isNew()) return base;
-        return base + '/' + this.id;
-    },
+    relations : [{
+        type : 'HasMany',
+        key : 'genres',
+        relatedModel : 'App.Models.GenreMovie',
+        reverseRelation : { key: 'movie' }
+    }],
 
     initialize : function () {
         this.on('error', this.error);

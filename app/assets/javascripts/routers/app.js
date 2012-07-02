@@ -10,8 +10,8 @@ App.Routers.App = Backbone.Router.extend({
 
 	genre : function (genre_slug) {
 		App.dispatcher.on('genres_loaded', function () {
-			var genre = App.Collections.genres.filter(function (model) { 
-				return model.get('slug') === genre_slug; 
+			var genre = App.Collections.genres.filter(function (model) {
+				return model.get('slug') === genre_slug;
 			})[0];
 			genre.collection.views[genre.id].setActive();
 		});

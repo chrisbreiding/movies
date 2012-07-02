@@ -1,0 +1,1 @@
+App.Models.GenreMovie = Backbone.RelationalModel.extend();
