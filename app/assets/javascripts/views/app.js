@@ -2,11 +2,15 @@ App.Views.App = Backbone.View.extend({
 
 	el : 'body',
 
+    // Cached elements
+    $searchInput : $('#search-input'),
+    $genreList : $('#genre-list'),
+    $movieList : $('#movie-list'),
+    $movieWrap : $('.movie-wrap'),
+
 	initialize : function () {
-		this.$searchInput = $('#search-input');
-		this.$genreList = $('#genre-list');
-		this.$movieList = $('#movie-list');
-		this.$movieWrap = $('.movie-wrap');
+        App.dispatcher.on('moviesLoading', this.moviesLoading, this);
+        App.dispatcher.on('moviesLoaded', this.moviesLoaded, this);
 	},
 
 	events : {
@@ -28,6 +32,15 @@ App.Views.App = Backbone.View.extend({
 		App.Routers.app.navigate('', {replace : true});
 	},
 
+    moviesLoading : function () {
+        this.$movieList.html('');
+        this.$movieWrap.addClass('loading');
+    },
+
+    moviesLoaded : function () {
+        this.$movieWrap.removeClass('loading');
+    },
+
 	search : function (e) {
 		e.preventDefault();
 
@@ -39,9 +52,7 @@ App.Views.App = Backbone.View.extend({
 
 		this.$genreList.find('.error').remove();
 
-		this.$movieWrap.addClass('loading');
-
-		this.$movieList.html('');
+        App.dispatcher.trigger('moviesLoading');
 
 		if(query !== '') {
 
@@ -51,7 +62,7 @@ App.Views.App = Backbone.View.extend({
 				url : '/search/' + query,
 
 				success : function (data) {
-					self.$movieWrap.removeClass('loading');
+                    App.dispatcher.trigger('moviesLoaded');
 					App.Collections.movies.reset(data);
 
                     if( self.$movieList.find('li:visible').length === 0 ) {
@@ -60,7 +71,7 @@ App.Views.App = Backbone.View.extend({
 				},
 
 				error : function (jqXHR, textStatus, errorThrown) {
-					self.$movieWrap.removeClass('loading');
+                    App.dispatcher.trigger('moviesLoaded');
 					App.Collections.movies.reset();
 				}
 

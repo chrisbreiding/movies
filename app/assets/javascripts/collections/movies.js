@@ -23,18 +23,14 @@ App.Collections.Movies = Backbone.Collection.extend({
 	},
 
 	filterByGenre : function (genreSlug) {
-		var $movieWrap = $('.movie-wrap');
+        var moviesFetched = $.get('/genres/' + genreSlug + '/movies/');
 
-		$('#movie-list').html('');
-		$movieWrap.addClass('loading');
+        App.dispatcher.trigger('moviesLoading');
 
-		$.ajax({
-			url : '/genres/' + genreSlug + '/movies/',
-			success : function(data) {
-				$movieWrap.removeClass('loading');
-				App.Collections.movies.reset(data);
-			}
-		});
+        moviesFetched.done($.proxy(function (movies) {
+            App.dispatcher.trigger('moviesLoaded');
+            this.reset(movies);
+        }, this));
 
 		App.Routers.app.navigate('genre/' + genreSlug, {replace : true});
 	}
