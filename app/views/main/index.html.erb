@@ -1,46 +1,30 @@
-<div class="container">
+<div class="list-container">
 
 	<h1><span>Movies</span></h1>
 
-	<p>Search for a movie or select a genre.</p>
+  <ul class="movies">
+    <li ng-repeat="movie in movies"
+        ng-click="setFeaturedMovie(movie)"
+        ng-class="{featured: movie.featured}">
+        {{movie.title}}
+    </li>
+  </ul>
 
-	<form id="movie-search" class="movie-search">
-		<input id="search-input" type="text" placeholder="Search" />
-		<a href="#" id="clear-search" class="close clear-search" title="Clear Search">
-      <i class="icon-remove"></i>
-    </a>
-	</form>
+</div>
 
-	<div class="row">
+<div class="details-container">
 
-		<div class="span4 genre-wrap genres">
-			<div class="well">
-				<ul id="genre-list"></ul>
-			</div>
-		</div>
+  <h2>{{featuredMovie.title}}</h2>
 
-		<div class="span4 movie-wrap">
-			<div class="well">
-				<ul id="movie-list"></ul>
-			</div>
-		</div>
+  <dl>
+    <dt>Seen by Chris?</dt>
+    <dd>{{featuredMovie.chris}}</dd>
 
-		<div class="span4 info-wrap info">
-			<div class="well info-well">
-        <a href="#" class="tab add-movie" title="Add Movie">
-          <i class="icon-plus"></i>
-        </a>
-			</div>
-		</div>
+    <dt>Seen by Sarah?</dt>
+    <dd>{{featuredMovie.sarah}}</dd>
 
-		<div class="span4 info-wrap info-persister">
-			<div class="well info-well">
-        <a href="#" class="tab add-movie" title="Add Movie">
-          <i class="icon-plus"></i>
-        </a>
-			</div>
-		</div>
+    <dt>On shortlist?</dt>
+    <dd>{{featuredMovie.shortlist}}</dd>
+  </dl>
 
-	</div><!-- /.row -->
-
-</div><!-- /.container -->
+</div>

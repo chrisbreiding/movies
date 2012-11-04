@@ -4,6 +4,8 @@ class MoviesController < ApplicationController
 	def index
 		if params[:genre_id]
       respond_with Genre.where(slug: params[:genre_id]).first.movies
+    else
+      respond_with Movie.all
 		end
 	end
 

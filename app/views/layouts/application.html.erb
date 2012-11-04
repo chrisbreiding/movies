@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="moviesApp">
 <head>
 	<title>Movies</title>
 	<%= stylesheet_link_tag "application", :media => "all" %>
 	<%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-controller="AppCtrl">
 	<%= yield %>
 
 	<%= javascript_include_tag "application" %>
