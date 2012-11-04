@@ -1,28 +1,35 @@
+@import "compass/css3";
+
+$default-border-radius: 3px;
+$font-default: "Helvetica Neue", Arial, sans-serif;
+
 body {
     background: #D2DFE9;
-}
-
-.lightbox-open {
-    overflow: hidden;
-    padding-right: 17px;
-}
-
-.container {
-    margin: 20px auto;
+    @include box-sizing(border-box);
+    line-height: 1.5;
+    padding: 20px 240px 20px 20px;
     position: relative;
+    min-width: 440px;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    line-height: 1.5em;
+.list-container {
+}
+
+.details-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 200px;
 }
 
 h1 {
     color: #313E47;
-}
+    margin-bottom: 20px;
 
-    h1 span {
+    span {
         cursor: pointer;
     }
+}
 
 h2 {
     font-size: 18px;
@@ -33,31 +40,10 @@ dl {
     margin: 10px 0;
 }
 
-/*** Login ***/
-
-.login .container {
-    width: 250px;
-}
-
-.login h1 {
-    margin-bottom: 20px;
-}
-
-.login input[type=text],
-.login input[type=password] {
-    width: 240px;
-}
-
-.login input[type=submit] {
-    float: right;
-    margin-top: 10px;
-    padding: 5px 10px;
-}
-
-/*** Movies ***/
+// ---- Movies ----
 
 .loading .well {
-    background-image: url(<%= asset_path('ajax-loader.gif') %>);
+    background-image: image-url('ajax-loader.gif');
     background-position: 50% 50%;
     background-repeat: no-repeat;
     min-height: 29px;
@@ -65,13 +51,13 @@ dl {
 
 .movie-search {
     position: relative;
-}
 
-    .movie-search input {
+    input {
         display: block;
         padding: 10px 20px;
         width: 898px;
     }
+}
 
     a.clear-search {
         -moz-border-radius: 50px;
@@ -100,23 +86,32 @@ dl {
     padding: 5px;
 }
 
-.genre-wrap ul,
-.movie-wrap ul {
+.movies {
     list-style: none;
     margin-left: 0;
-}
 
-    .genre-wrap li,
-    .movie-wrap li {
+    li {
         background: #FFF;
-        -moz-border-radius: 3px;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
+        @include border-radius;
         border: solid 1px #e3e3e3;
         cursor: pointer;
+        float: left;
+        height: 32px;
+        line-height: 32px;
         margin: 5px;
-        padding: 7px 10px;
+        overflow: hidden;
+        padding: 0 10px;
+        width: 200px;
+
+        &.featured,
+        &:hover,
+        &:focus,
+        &:active {
+            background: #559FD9;
+            border-color: darken(#559FD9, 20%);
+        }
     }
+}
 
     .genre-wrap li:hover,
     .genre-wrap li:focus,
@@ -124,14 +119,8 @@ dl {
         background: #BADA55;
     }
 
-    .movie-wrap li:hover,
-    .movie-wrap li:focus,
-    .movie-wrap li.active {
-        background: #559FD9;
-    }
-
     .genre-wrap li.error,
-    .movie-wrap li.error {
+    .movies li.error {
         background: #FFF !important;
         color: #999;
         cursor: default;
@@ -208,7 +197,7 @@ dl {
                 }
 
                     .rating:before {
-                        background: url(<%= asset_path('icon-sprite.png') %>) -48px -164px no-repeat;
+                        background: image-url('icon-sprite.png') -48px -164px no-repeat;
                         content: '';
                         display: block;
                         position: absolute;
