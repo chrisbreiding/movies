@@ -11,13 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require underscore.min
-//= require backbone.min
-//= require backbone-relational
-//= require chosen.jquery.min
+//= require underscore-1.4.2.min
+//= require chosen.jquery-0.9.8.min
+//= require angular-1.0.2.min
 //= require setup
-//= require_directory ./templates
-//= require_directory ./models
-//= require_directory ./collections
-//= require_directory ./views
-//= require_directory ./routers
+//= require_directory ./controllers
