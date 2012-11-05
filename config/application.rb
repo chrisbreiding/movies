@@ -56,5 +56,8 @@ module Movies
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # add fonts to asset paths
+    config.assets.paths << Rails.root.join("app", "vendor", "assets", "fonts")
   end
 end

@@ -1,7 +1,7 @@
 angular.module('movieServices', ['ngResource'])
 
 .factory('MovieGenre', function ($resource) {
-    return $resource('/movies/:movieId/genres.json');
+    return $resource('/movies/:id/genres.json');
 })
 
 .factory('Movie', function ($resource, MovieGenre) {
@@ -10,7 +10,7 @@ angular.module('movieServices', ['ngResource'])
     Movie.prototype.getGenres = function () {
         var self = this;
 
-        MovieGenre.query({ movieId : this.id }, function (genres) {
+        MovieGenre.query({ id : this.id }, function (genres) {
             self.genres = genres;
         });
     };

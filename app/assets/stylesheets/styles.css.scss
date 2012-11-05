@@ -47,32 +47,7 @@ dl {
 }
 
 
-// ---- General ----
-
-.list-container {
-}
-
-.details-container {
-    background: darken($light-green, 10%);
-    border-left: solid 1px $green;
-    @include box-sizing(border-box);
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 300px;
-    height: 100%;
-}
-
-
 // ---- Movies ----
-
-.loading .well {
-    background-image: image-url('ajax-loader.gif');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    min-height: 29px;
-}
 
 .movie-search {
     position: relative;
@@ -104,12 +79,6 @@ dl {
     a.clear-search:focus {
         background-color: #d3d3d3;
     }
-
-.well {
-    background: #f5f5f5;
-    border: solid 1px #CCC;
-    padding: 5px;
-}
 
 .movies {
     list-style: none;
@@ -151,144 +120,84 @@ dl {
         cursor: default;
     }
 
-.info-persister {
-    display: none;
-    float: none;
+.details-container {
+    background: darken($light-green, 10%);
+    border-left: solid 1px $green;
+    @include box-sizing(border-box);
+    padding: 20px;
     position: fixed;
-    top: 10px;
-}
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
 
-     .info-wrap .well {
-        position: relative;
+    img {
+        -moz-border-radius-topright: 3px;
+        -webkit-border-top-right-radius: 3px;
+        border-top-right-radius: 3px;
+        float: right;
+        margin: 5px 0 10px 15px;
     }
 
-       .info-box {
-            margin: 10px;
+    dt {
+        float: left;
+        padding-top: 10px;
+        text-align: right;
+        width: 120px;
+    }
+
+    dd {
+        border-bottom: solid 1px $green;
+        margin-left: 0;
+        min-height: 18px;
+        padding: 10px 5px 10px 135px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    .rating {
+        padding-left: 30px;
+        position: relative;
+        width: 70px;
+
+        &:before {
+            background: image-url('icon-sprite.png') -48px -164px no-repeat;
+            content: '';
+            display: block;
+            position: absolute;
+                left: 4px;
+                top: 3px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+        .rating-meter,
+        .rating-meter span {
+            display: block;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
         }
 
-            .info-box h2 {
-                color: #D95594;
-                margin: 0;
-                padding: 5px 10px;
-            }
+        .rating-meter {
+            background: #000;
+            float: right;
+            margin-top: 2px;
+            width: 102px;
+            height: 18px;
 
-            .info-box img {
-                -moz-border-radius-topright: 3px;
-                -webkit-border-top-right-radius: 3px;
-                border-top-right-radius: 3px;
-                float: right;
-                margin: 5px 0 10px 15px;
-            }
-
-            .info-box dl {
-                margin: 0;
-            }
-
-            .info-box dt {
+            span {
+                background: #D95594;
                 float: left;
-                padding: 7px 0 0 10px;
-                width: 100px;
+                margin: 1px;
+                height: 16px;
             }
-
-            .info-box dd {
-                margin-left: 0;
-                padding: 7px 5px 7px 115px;
-            }
-
-            .info-box dd:nth-child(4n) {
-                background: #F8DCEA;
-            }
-
-            .info-box dd:last-child {
-                -webkit-border-radius: 0 0 3px 3px;
-                -moz-border-radius: 0 0 3px 3px;
-                border-radius: 0 0 3px 3px;
-            }
-
-                .info-box [class^="icon-"],
-                .info-box [class*=" icon-"] {
-                    opacity: 0.7;
-                }
-
-                .info-box ul {
-                    list-style: none;
-                    margin: 0;
-                }
-
-                .info-box .rating {
-                    padding-left: 30px;
-                    position: relative;
-                    width: 70px;
-                }
-
-                    .rating:before {
-                        background: image-url('icon-sprite.png') -48px -164px no-repeat;
-                        content: '';
-                        display: block;
-                        position: absolute;
-                            left: 4px;
-                            top: 3px;
-                        width: 24px;
-                        height: 24px;
-                    }
-
-                .rating-meter,
-                .rating-meter span {
-                    display: block;
-                    -moz-border-radius: 3px;
-                    -webkit-border-radius: 3px;
-                    border-radius: 3px;
-                }
-
-                .rating-meter {
-                    background: #000;
-                    float: right;
-                    margin-top: 2px;
-                    width: 102px;
-                    height: 18px;
-                }
-
-                    .rating-meter span {
-                        background: #D95594;
-                        float: left;
-                        margin: 1px;
-                        height: 16px;
-                    }
-
-            a.tab {
-                background: #e3e3e3;
-                -moz-border-radius: 0 3px 3px 0;
-                -webkit-border-radius: 0 3px 3px 0;
-                border-radius: 0 3px 3px 0;
-                border: solid 1px #c7c7c7;
-                display: block;
-                padding: 3px;
-                position: absolute;
-                    right: -22px;
-                text-decoration: none;
-            }
-
-            .add-movie {
-                top: 2px;
-            }
-
-            .edit-movie {
-                top: 31px;
-            }
-
-            a.tab:hover,
-            a.tab:focus {
-                background: #FFF;
-            }
-
-                .tab i {
-                    opacity: 0.5
-                }
-
-                .tab:hover i,
-                .tab:focus i {
-                    opacity: 0.8;
-                }
+        }
 
 .lightbox {
     background: rgba(0,0,0,0.7);
