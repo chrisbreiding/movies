@@ -1,1 +1,1 @@
-var moviesApp = angular.module('moviesApp', []);
+var moviesApp = angular.module('moviesApp', ['movieServices']);

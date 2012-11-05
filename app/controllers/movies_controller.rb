@@ -5,12 +5,12 @@ class MoviesController < ApplicationController
 		if params[:genre_id]
       respond_with Genre.where(slug: params[:genre_id]).first.movies
     else
-      respond_with Movie.all
+      respond_with Movie.limit(50).order("title")
 		end
 	end
 
   def show
-    respond_with Movie.find(params[:id]).includes(:genres)
+    respond_with Movie.includes(:genres).find(params[:id])
   end
 
   def create

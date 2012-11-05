@@ -1,15 +1,23 @@
-moviesApp.controller('AppCtrl', function ($scope, $http) {
+moviesApp.controller('AppCtrl', function ($scope, Movie) {
 
-    $http.get('/movies.json').success(function (movies) {
-        $scope.movies = movies;
-        $scope.featuredMovie = $scope.movies[0];
-        $scope.featuredMovie.featured = true;
+    $scope.movies = Movie.query(function () {
+        $scope.featuredMovie = $scope.movies[_.random(0, $scope.movies.length - 1)];
+        $scope.featuredMovie.getGenres();
     });
 
-    $scope.setFeaturedMovie = function (movie) {
-        $scope.featuredMovie.featured = null;
-        $scope.featuredMovie = movie;
-        $scope.featuredMovie.featured = true;
+    $scope.genreForms = {
+        0: '',
+        one: 'Genre',
+        other: 'Genres'
     };
 
-}).$inject = (['$scope', '$http']);
+    $scope.isFeatured = function (movie) {
+        return movie === $scope.featuredMovie;
+    };
+
+    $scope.setFeaturedMovie = function (movie) {
+        $scope.featuredMovie = movie;
+        !movie.genres && movie.getGenres();
+    };
+
+}).$inject = (['$scope', 'Movie']);

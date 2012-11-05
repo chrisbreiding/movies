@@ -3,28 +3,34 @@
 $default-border-radius: 3px;
 $font-default: "Helvetica Neue", Arial, sans-serif;
 
+$light-green: #DCE8D1;
+$green: darken($light-green, 20%); // #ABCC8C;
+
+
+// ---- Helpers ----
+
+.clearfix {
+    &:before,&:after { content:""; display:table; }
+    &:after { clear:both; }
+    zoom:1; // For IE 6/7
+}
+
+
+// ---- Base ----
+
 body {
-    background: #D2DFE9;
+    background: $light-green;
     @include box-sizing(border-box);
+    @extend .clearfix;
     line-height: 1.5;
-    padding: 20px 240px 20px 20px;
+    padding: 20px 315px 20px 15px;
     position: relative;
     min-width: 440px;
 }
 
-.list-container {
-}
-
-.details-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 200px;
-}
-
 h1 {
     color: #313E47;
-    margin-bottom: 20px;
+    margin: 0 0 20px 5px;
 
     span {
         cursor: pointer;
@@ -39,6 +45,25 @@ p,
 dl {
     margin: 10px 0;
 }
+
+
+// ---- General ----
+
+.list-container {
+}
+
+.details-container {
+    background: darken($light-green, 10%);
+    border-left: solid 1px $green;
+    @include box-sizing(border-box);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+}
+
 
 // ---- Movies ----
 
@@ -107,8 +132,8 @@ dl {
         &:hover,
         &:focus,
         &:active {
-            background: #559FD9;
-            border-color: darken(#559FD9, 20%);
+            background: $green;
+            border-color: darken($green, 20%);
         }
     }
 }

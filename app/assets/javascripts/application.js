@@ -14,5 +14,7 @@
 //= require underscore-1.4.2.min
 //= require chosen.jquery-0.9.8.min
 //= require angular-1.0.2.min
+//= require angular-resource-1.0.2.min
 //= require setup
+//= require services
 //= require_directory ./controllers

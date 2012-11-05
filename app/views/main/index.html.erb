@@ -5,7 +5,7 @@
   <ul class="movies">
     <li ng-repeat="movie in movies"
         ng-click="setFeaturedMovie(movie)"
-        ng-class="{featured: movie.featured}">
+        ng-class="{featured: isFeatured(movie)}">
         {{movie.title}}
     </li>
   </ul>
@@ -17,6 +17,15 @@
   <h2>{{featuredMovie.title}}</h2>
 
   <dl>
+    <dt>
+      <ng-pluralize count="featuredMovie.genres.length" when="genreForms"></ng-pluralize>
+    </dt>
+    <dd>
+      <ul>
+        <li ng-repeat="genre in featuredMovie.genres">{{genre.name}}</li>
+      </ul>
+    </dd>
+
     <dt>Seen by Chris?</dt>
     <dd>{{featuredMovie.chris}}</dd>
 
