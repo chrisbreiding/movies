@@ -1,0 +1,11 @@
+launch_in_dev:
+- chrome
+src_files:
+- vendor/assets/javascripts/jquery-1.8.2.min.js
+- vendor/assets/javascripts/angular-1.0.2.min.js
+- vendor/assets/javascripts/angular-resource-1.0.2.min.js
+- vendor/assets/javascripts/underscore-1.4.2.min.js
+- app/assets/javascripts/setup.js
+- app/assets/javascripts/services.js
+- app/assets/javascripts/controllers/app_controller.js
+- spec/javascripts/*.js
