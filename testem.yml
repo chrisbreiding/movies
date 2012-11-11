@@ -7,5 +7,7 @@ src_files:
 - vendor/assets/javascripts/underscore-1.4.2.min.js
 - app/assets/javascripts/setup.js
 - app/assets/javascripts/services.js
+- app/assets/javascripts/filters.js
+- app/assets/javascripts/directives.js
 - app/assets/javascripts/controllers/app_controller.js
 - spec/javascripts/*.js
