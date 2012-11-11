@@ -17,4 +17,6 @@
 //= require angular-resource-1.0.2.min
 //= require setup
 //= require services
+//= require filters
+//= require directives
 //= require_directory ./controllers

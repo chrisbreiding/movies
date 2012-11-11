@@ -4,8 +4,8 @@ $default-border-radius: 3px;
 $font-default: "Helvetica Neue", Arial, sans-serif;
 
 $light-green: #DCE8D1;
-$green: darken($light-green, 20%); // #ABCC8C;
-
+$green: darken($light-green, 20%);
+$dark-green: darken($green, 20%);
 
 // ---- Helpers ----
 
@@ -23,7 +23,7 @@ body {
     @include box-sizing(border-box);
     @extend .clearfix;
     line-height: 1.5;
-    padding: 20px 315px 20px 15px;
+    padding: 20px 345px 20px 15px;
     position: relative;
     min-width: 440px;
 }
@@ -44,6 +44,11 @@ h2 {
 p,
 dl {
     margin: 10px 0;
+}
+
+a,
+a:hover {
+    color: darken($dark-green, 20%);
 }
 
 
@@ -102,7 +107,7 @@ dl {
         &:focus,
         &:active {
             background: $green;
-            border-color: darken($green, 20%);
+            border-color: $dark-green;
         }
     }
 }
@@ -128,8 +133,13 @@ dl {
     position: fixed;
     top: 0;
     right: 0;
-    width: 300px;
+    width: 330px;
     height: 100%;
+
+    h2,
+    .rt-link {
+        text-align: center;
+    }
 
     img {
         -moz-border-radius-topright: 3px;
@@ -158,46 +168,30 @@ dl {
         margin: 0;
     }
 
-    .rating {
-        padding-left: 30px;
-        position: relative;
-        width: 70px;
-
-        &:before {
-            background: image-url('icon-sprite.png') -48px -164px no-repeat;
-            content: '';
-            display: block;
-            position: absolute;
-                left: 4px;
-                top: 3px;
-            width: 24px;
-            height: 24px;
-        }
-    }
 }
 
-        .rating-meter,
-        .rating-meter span {
-            display: block;
-            -moz-border-radius: 3px;
-            -webkit-border-radius: 3px;
-            border-radius: 3px;
-        }
+    .rating,
+    .rating span {
+        display: block;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+    }
 
-        .rating-meter {
-            background: #000;
-            float: right;
-            margin-top: 2px;
-            width: 102px;
-            height: 18px;
+    .rating {
+        background: #000;
+        float: right;
+        margin-top: 2px;
+        width: 102px;
+        height: 18px;
 
-            span {
-                background: #D95594;
-                float: left;
-                margin: 1px;
-                height: 16px;
-            }
+        span {
+            background: $dark-green;
+            float: left;
+            margin: 1px;
+            height: 16px;
         }
+    }
 
 .lightbox {
     background: rgba(0,0,0,0.7);

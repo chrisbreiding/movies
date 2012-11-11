@@ -12,7 +12,7 @@ moviesApp.controller('AppCtrl', function ($scope, Movie) {
 
     $scope.setFeaturedMovie = function (movie) {
         $scope.featuredMovie = movie;
-        movie.genres || movie.getGenres();
+        movie.getAssociations();
     };
 
     $scope.isFeatured = function (movie) {
