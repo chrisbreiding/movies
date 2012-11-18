@@ -1,4 +1,4 @@
-moviesApp.controller('AppCtrl', function ($scope, $filter, Movie, Genre) {
+moviesApp.controller('AppCtrl', function ($scope, $filter, _, Movie, Genre) {
 
     $scope.movies = Movie.query(function () {
         $scope.setFeaturedMovie($scope.getRandomMovie());

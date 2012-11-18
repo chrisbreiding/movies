@@ -1,3 +1,9 @@
+angular.module('utilServices', [])
+
+.factory('_', function () {
+    return _;
+});
+
 angular.module('movieServices', ['ngResource'])
 
 .factory('RottenTomatoes', function ($http) {

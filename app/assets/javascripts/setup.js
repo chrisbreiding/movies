@@ -1,1 +1,6 @@
-var moviesApp = angular.module('moviesApp', ['movieServices', 'movieFilters', 'movieDirectives']);
+var moviesApp = angular.module('moviesApp', [
+    'utilServices',
+    'movieServices',
+    'movieFilters',
+    'movieDirectives'
+]);
