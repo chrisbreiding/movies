@@ -26,20 +26,12 @@ angular.module('movieServices', ['ngResource'])
     };
 })
 
-.factory('MovieGenre', function ($resource) {
-    return $resource('/movies/:id/genres.json');
+.factory('Genre', function ($resource) {
+    return $resource('/genres/:id');
 })
 
-.factory('Movie', function ($resource, MovieGenre, RottenTomatoes) {
-    var Movie = $resource('/movies/:id.json');
-
-    Movie.prototype.getGenres = function () {
-        var self = this;
-
-        MovieGenre.query({ id : this.id }, function (genres) {
-            self.genres = genres;
-        });
-    };
+.factory('Movie', function ($resource, RottenTomatoes) {
+    var Movie = $resource('/movies/:id');
 
     Movie.prototype.getRTData = function (rtId) {
         var self = this;
@@ -50,7 +42,6 @@ angular.module('movieServices', ['ngResource'])
     };
 
     Movie.prototype.getAssociations = function () {
-        this.genres || this.getGenres();
         this.critics_rating || this.getRTData(this.rt_id);
     };
 

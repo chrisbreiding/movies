@@ -21,4 +21,13 @@ angular.module('movieDirectives', [])
             }
         });
     };
+})
+
+.directive('chosen', function () {
+    return function (scope, elem, attrs) {
+        scope.$watch('genres', function (newVal, oldVal) {
+            elem.trigger('liszt:updated');
+        }, true);
+        elem.chosen();
+    };
 });

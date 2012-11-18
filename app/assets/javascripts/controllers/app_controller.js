@@ -1,8 +1,16 @@
-moviesApp.controller('AppCtrl', function ($scope, Movie) {
+moviesApp.controller('AppCtrl', function ($scope, $filter, Movie, Genre) {
 
     $scope.movies = Movie.query(function () {
         $scope.setFeaturedMovie($scope.getRandomMovie());
     });
+
+    $scope.filteredMovies = [];
+
+    $scope.$watch('query', function(newVal, oldVal) {
+        $scope.filteredMovies = $filter('filter')($scope.movies, $scope.query);
+    });
+
+    $scope.genres = Genre.query();
 
     $scope.genreForms = {
         0 : '',

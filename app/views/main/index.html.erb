@@ -1,12 +1,30 @@
 <div class="list-container">
 
-	<h1><span>Movies</span></h1>
+  <div class="header clearfix">
 
-  <ul class="movies">
-    <li ng-repeat="movie in movies"
+  	<h1><span>Movies</span></h1>
+
+    <p class="movie-search">
+      <label for="search">Search</label>
+      <input type="text" name="search" ng-model="query" placeholder="Search for movies" />
+    </p>
+
+    <p class="genre-filter">
+      <label for="genre-filter">Filter by genre</label>
+      <select ng-model="selectedGenres" ng-options="genre.name for genre in genres" data-placeholder="Filter by genre" multiple chosen></select>
+    </p>
+
+    <p class="count">Displaying {{filteredMovies.length}} / {{movies.length}}</p>
+
+  </div>
+
+  <ul class="movies clearfix">
+    <li ng-repeat="movie in filteredMovies">
+      <span
         ng-click="setFeaturedMovie(movie)"
         ng-class="{featured: isFeatured(movie)}">
         {{movie.title}}
+      </span>
     </li>
   </ul>
 

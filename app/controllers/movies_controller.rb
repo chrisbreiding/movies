@@ -5,7 +5,7 @@ class MoviesController < ApplicationController
 		if params[:genre_id]
       respond_with Genre.where(slug: params[:genre_id]).first.movies
     else
-      respond_with Movie.limit(50).order("title")
+      respond_with Movie.order("title").to_json(include: :genres)
 		end
 	end
 
