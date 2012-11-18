@@ -10,4 +10,5 @@ src_files:
 - app/assets/javascripts/filters.js
 - app/assets/javascripts/directives.js
 - app/assets/javascripts/controllers/app_controller.js
-- spec/javascripts/*.js
+- spec/javascripts/vendor/angular-mocks.js
+- spec/javascripts/unit/*.js

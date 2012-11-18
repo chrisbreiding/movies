@@ -17,7 +17,7 @@ describe('Controllers', function () {
             $httpBackend = _$httpBackend_;
 
             $httpBackend
-                .when('GET', '/movies/.json')
+                .when('GET', '/movies')
                 .respond([
                     {
                         title : 'Super Movie',
@@ -30,9 +30,11 @@ describe('Controllers', function () {
                 ]);
 
             $httpBackend
-                .when('GET', '/movies//genres.json')
+                .when('GET', '/genres')
                 .respond([
-                    { name : 'Action' }
+                    { name : 'Action' },
+                    { name : 'Comedy' },
+                    { name : 'Western' }
                 ]);
 
             $httpBackend
@@ -143,10 +145,6 @@ describe('Controllers', function () {
         it('can test if a movie is featured', function () {
             scope.setFeaturedMovie(scope.movies[0]);
             expect(scope.isFeatured(scope.movies[0])).toBe(true);
-        });
-
-        it('fetches the genre for the featured movie', function () {
-            expect(scope.featuredMovie.genres).toBeDefined();
         });
 
         it('fetches rotten tomatoes data for the featured movie', function () {
