@@ -33,11 +33,11 @@ angular.module('movieServices', ['ngResource'])
 })
 
 .factory('Genre', function ($resource) {
-    return $resource('/genres/:id');
+    return $resource('/api/genres/:id');
 })
 
 .factory('Movie', function ($resource, RottenTomatoes) {
-    var Movie = $resource('/movies/:id');
+    var Movie = $resource('/api/movies/:id');
 
     Movie.prototype.getRTData = function (rtId) {
         var self = this;

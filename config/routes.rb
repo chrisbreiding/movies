@@ -1,16 +1,18 @@
 Movies::Application.routes.draw do
 
-  resources :movies do
-    resources :genres
-  end
+  namespace :api do
+    resources :movies do
+      resources :genres
+    end
 
-  resources :genres do
-    resources :movies
+    resources :genres do
+      resources :movies
+    end
   end
 
   root to: "main#index"
 
   match '/search/:query', to: 'movies#search'
-  match '*path', to: 'movies#index'
+  match '*path', to: 'main#index'
 
 end
