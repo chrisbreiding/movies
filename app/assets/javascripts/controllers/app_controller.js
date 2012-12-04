@@ -1,16 +1,30 @@
-moviesApp.controller('AppCtrl', function ($scope, $filter, _, Movie, Genre) {
+moviesApp.controller('AppCtrl', function ($scope, $filter, $routeParams, $location, _, Movie, GenreMovie, Genre) {
 
-    $scope.movies = Movie.query(function () {
-        $scope.setFeaturedMovie($scope.getRandomMovie());
-    });
+    if ( $routeParams.genreSlug ) {
+        $scope.movies = GenreMovie.query({ genreSlug : $routeParams.genreSlug }, function () {
+            $scope.setFeaturedMovie($scope.getRandomMovie());
+        });
+    } else {
+        $scope.movies = Movie.query(function () {
+            $scope.setFeaturedMovie($scope.getRandomMovie());
+        });
+    }
 
     $scope.filteredMovies = [];
 
-    $scope.$watch('query', function(newVal, oldVal) {
-        $scope.filteredMovies = $filter('filter')($scope.movies, $scope.query);
+    $scope.$watch('search', function(newVal, oldVal) {
+        $scope.filteredMovies = $filter('filter')($scope.movies, $scope.search);
     });
 
     $scope.genres = Genre.query();
+
+    $scope.$watch('selectedGenre', function(genre) {
+        if (genre === null) {
+            $location.path('/');
+        } else if (genre) {
+            $location.path('/genre/' + genre.slug);
+        }
+    });
 
     $scope.genreForms = {
         0 : '',
