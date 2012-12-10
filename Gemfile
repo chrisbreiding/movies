@@ -14,6 +14,7 @@ group :assets do
   gem 'compass-rails'
 
   gem 'jquery-rails'
+  gem 'coffee-rails'
 
   gem 'therubyracer'
   gem 'execjs'

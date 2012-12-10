@@ -15,7 +15,7 @@
 //= require chosen.jquery-0.9.8.min
 //= require angular-1.0.2.min
 //= require angular-resource-1.0.2.min
-//= require setup
+//= require app
 //= require routes
 //= require services
 //= require filters
