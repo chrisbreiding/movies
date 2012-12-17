@@ -1,24 +1,18 @@
-AppCtrl = moviesApp.controller 'AppCtrl', ($scope, $filter, $routeParams, $location, Movie, GenreMovie, Genre) ->
+AppCtrl = moviesApp.controller 'AppCtrl', ($scope, $filter, $location, Movie, Genre, params) ->
 
-  if $routeParams.genreSlug
-    $scope.movies = GenreMovie.query { genreSlug: $routeParams.genreSlug }, ->
-      $scope.setFeaturedMovie $scope.getRandomMovie()
-  else
-    $scope.movies = Movie.query ->
-      $scope.setFeaturedMovie $scope.getRandomMovie()
-
-  $scope.filteredMovies = []
-
-  $scope.$watch 'search', (newVal, oldVal) ->
-    $scope.filteredMovies = $filter('filter')($scope.movies, $scope.search)
+  $scope.movies = Movie.query ->
+    $scope.setFeaturedMovie $scope.getRandomMovie()
 
   $scope.genres = Genre.query()
 
-  $scope.$watch 'selectedGenre', (genre) ->
-    if !genre?
-      $location.path '/'
-    else if genre
-      $location.path "/genre/#{genre.slug}"
+  $scope.selectedGenre = params[1] if params
+
+  $scope.selectGenre = ->
+    genre = $scope.selectedGenre
+    if genre?
+      $location.path "/genre/#{genre}"
+    else
+      $location.path '/' if $location.path() isnt '/'
 
   $scope.genreForms =
     0: ''
@@ -35,12 +29,11 @@ AppCtrl = moviesApp.controller 'AppCtrl', ($scope, $filter, $routeParams, $locat
   $scope.getRandomMovie = ->
     $scope.movies[ _.random(0, $scope.movies.length - 1) ]
 
-# AppCtrl.$inject = [
-#   '$scope'
-#   '$filter'
-#   '$routeParams'
-#   '$location'
-#   'Movie'
-#   'GenreMovie'
-#   'Genre'
-# ]
+AppCtrl.$inject = [
+  '$scope'
+  '$filter'
+  '$location'
+  'Movie'
+  'Genre'
+  'params'
+]

@@ -11,7 +11,12 @@
 
     <p class="genre-filter">
       <label for="genre-filter">Filter by genre</label>
-      <select ng-model="selectedGenre" data-placeholder="Filter by genre" ng-options="genre.name for genre in genres" ng-selected="genre.selected" chosen>
+      <select
+        ng-model="selectedGenre"
+        ng-change="selectGenre()"
+        ng-options="genre.slug as genre.name for genre in genres"
+        data-placeholder="Filter by genre"
+        chosen>
         <option value="">All</option>
       </select>
     </p>
