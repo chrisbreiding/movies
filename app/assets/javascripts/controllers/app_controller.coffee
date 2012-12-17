@@ -10,9 +10,9 @@ AppCtrl = moviesApp.controller 'AppCtrl', ($scope, $filter, $location, Movie, Ge
   $scope.selectGenre = ->
     genre = $scope.selectedGenre
     if genre?
-      $location.path "/genre/#{genre}"
+      $location.replace().path "/genre/#{genre}"
     else
-      $location.path '/' if $location.path() isnt '/'
+      $location.replace().path '/' if $location.path() isnt '/'
 
   $scope.genreForms =
     0: ''
