@@ -1,7 +1,10 @@
 require "bundler/capistrano"
 
-$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
+# $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
 require "rvm/capistrano" # Load RVM's capistrano plugin.
+# set :rvm_bin_path, "Users/chrisbreiding/.rvm/scripts/rvm"
+# set :rvm_bin_path, "/usr/local/rvm/bin"
+set :rvm_bin_path, "/usr/local/rvm/bin"
 
 set :application, "movies"
 set :repository,  "git://github.com/chrisbreiding/movies.git"
@@ -26,7 +29,7 @@ set :default_stage, "production"
 # set :rvm_type, :user
 # set :rvm_type, :system
 
-after 'deploy:symlink', 'deploy:cleanup' # makes sure there's only 3 deployments, deletes the extras
+after 'deploy:create_symlink', 'deploy:cleanup' # makes sure there's only 3 deployments, deletes the extras
 
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
