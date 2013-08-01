@@ -2,12 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem 'rake'
-gem 'rvm-capistrano'
+gem 'thin'
+# gem 'pg'
 gem 'mysql2'
-
-group :test do
-  gem 'sqlite3'
-end
 
 group :assets do
   gem 'sass-rails'

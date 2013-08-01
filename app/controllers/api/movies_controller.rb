@@ -1,14 +1,14 @@
 module Api
   class MoviesController < ApplicationController
-  	respond_to :json
+    respond_to :json
 
-  	def index
-  		if params[:genre_id]
+    def index
+      if params[:genre_id]
         respond_with Genre.where(slug: params[:genre_id]).first.movies
       else
         respond_with Movie.order("title").to_json(include: :genres)
-  		end
-  	end
+      end
+    end
 
     def show
       respond_with Movie.includes(:genres).find(params[:id])

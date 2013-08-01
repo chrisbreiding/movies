@@ -14,23 +14,23 @@
 ActiveRecord::Schema.define(:version => 20121110181100) do
 
   create_table "genres", :force => true do |t|
-    t.string "name", :default => "Unknown", :null => false
-    t.string "slug", :default => "unknown", :null => false
+    t.string "name"
+    t.string "slug"
   end
 
-  create_table "genres_movies", :force => true do |t|
-    t.integer "movie_id", :default => 1,  :null => false
-    t.integer "genre_id", :default => 16, :null => false
+  create_table "genres_movies", :id => false, :force => true do |t|
+    t.integer "movie_id"
+    t.integer "genre_id"
   end
 
   create_table "movies", :force => true do |t|
-    t.string   "title",      :default => " ",   :null => false
-    t.integer  "chris",      :default => 0,     :null => false
-    t.integer  "sarah",      :default => 0,     :null => false
+    t.string   "title"
+    t.string   "rt_id"
+    t.boolean  "chris",      :default => false
+    t.boolean  "sarah",      :default => false
+    t.boolean  "shortlist",  :default => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
-    t.string   "rt_id",      :default => " ",   :null => false
-    t.boolean  "shortlist",  :default => false, :null => false
   end
 
 end
