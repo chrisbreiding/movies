@@ -1,5 +1,0 @@
-describe('Movie Services', function () {
-
-
-
-});
