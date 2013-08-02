@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.14'
 gem 'rake'
 gem 'thin'
-# gem 'pg'
 gem 'mysql2'
+
+gem 'ember-rails'
+gem 'ember-source', '1.0.0.rc6.4'
 
 group :assets do
   gem 'sass-rails'

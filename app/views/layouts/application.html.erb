@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html ng-app="moviesApp">
+<html>
 <head>
 	<title>Movies</title>
 	<%= stylesheet_link_tag "application", :media => "all" %>
 	<%= csrf_meta_tags %>
 </head>
-<body ng-controller="AppCtrl">
+<body>
 	<%= yield %>
 
+  <%= javascript_include_tag "templates/all" %>
 	<%= javascript_include_tag "application" %>
 </body>
 </html>

@@ -59,5 +59,7 @@ module Movies
 
     # add fonts to asset paths
     config.assets.paths << Rails.root.join("app", "vendor", "assets", "fonts")
+
+    config.ember.variant = :development
   end
 end
