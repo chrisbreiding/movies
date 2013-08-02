@@ -1,0 +1,16 @@
+<h1>Movies</h1>
+
+<ul class="movies-list">
+  {{#each controller}}
+    <li>
+      {{#linkTo 'movie' this}}
+        {{title}}
+        <i class="icon-arrow-right"></i>
+      {{/linkTo}}
+    </li>
+  {{/each}}
+</ul>
+
+<div class="selected-movie">
+  {{outlet}}
+</div>
