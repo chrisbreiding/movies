@@ -1,2 +1,15 @@
-<h2>{{title}}</h2>
-<p>{{description}}</p>
+<div class="selected-movie">
+
+  <h2>{{title}}</h2>
+  <dl>
+    <dt>Seen by Chris?</dt>
+    <dd>{{humanize_bool chris}}</dd>
+    <dt>Seen by Sarah?</dt>
+    <dd>{{humanize_bool sarah}}</dd>
+    <dt>On Shortlist?</dt>
+    <dd>{{humanize_bool shortlist}}</dd>
+    <dt>RT ID</dt>
+    <dd>{{rt_id}}</dd>
+  </dl>
+
+</div>

@@ -3,15 +3,17 @@ module Api
     respond_to :json
 
     def index
-      if params[:genre_id]
-        respond_with Genre.where(slug: params[:genre_id]).first.movies
-      else
-        respond_with Movie.order("title").to_json(include: :genres)
-      end
+      respond_with Movie.limit(50).as_json
+      # if params[:genre_id]
+      #   respond_with Genre.where(slug: params[:genre_id]).first.movies
+      # else
+      #   respond_with Movie.order("title").to_json(include: :genres)
+      # end
     end
 
     def show
-      respond_with Movie.includes(:genres).find(params[:id])
+      respond_with movie: Movie.find(params[:id])
+      # respond_with Movie.includes(:genres).find(params[:id])
     end
 
     def create
