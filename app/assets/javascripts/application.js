@@ -7,6 +7,7 @@
 //= require_tree ./services
 //= require_tree ./models
 //= require_tree ./controllers
+//= require_tree ./components
 //= require_tree ./views
 //= require_tree ./helpers
 //= require_tree ./templates
