@@ -1,1 +1,5 @@
-<div class="rating" {{bindAttr style=rating_width}}></div>
+{{#if isValidRating}}
+  <div class="rating" {{bindAttr style=ratingWidth}}></div>
+{{else}}
+  No Rating
+{{/if}}
