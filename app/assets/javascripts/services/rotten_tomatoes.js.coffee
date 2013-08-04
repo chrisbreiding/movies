@@ -17,7 +17,7 @@ Movies.RottenTomatoes =
           year: movie.year
           runtime: movie.runtime
           cast: movie.abridged_cast
-          poster: movie.posters.thumbnail
+          poster: movie.posters.profile # detailed / original / profile / thumbnail
           mpaa_rating: movie.mpaa_rating
           critics_rating: movie.ratings.critics_score
           link: movie.links.alternate

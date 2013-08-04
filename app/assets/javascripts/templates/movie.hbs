@@ -1,6 +1,7 @@
 <div class="selected-movie">
 
   <h2>{{title}}</h2>
+
   <dl>
     <dt>Seen by Chris?</dt>
     <dd>{{humanize_bool chris}}</dd>
@@ -18,7 +19,7 @@
     <dd>{{year}}</dd>
 
     <dt>Runtime</dt>
-    <dd>{{runtime}}</dd>
+    <dd>{{minutes_to_mixed runtime}}</dd>
 
     <dt>Cast</dt>
     <dd>
@@ -29,15 +30,17 @@
       </ul>
     </dd>
 
-    <dt>Poster</dt>
-    <dd>{{poster}}</dd>
-
     <dt>MPAA Rating</dt>
     <dd>{{mpaa_rating}}</dd>
 
     <dt>Link</dt>
-    <dd>{{link}}</dd>
-
+    <dd>
+      <a {{bindAttr href=link}} target="_blank">
+        View on Rotten Tomatoes <i class="icon-external-link"></i>
+      </a>
+    </dd>
   </dl>
+
+  <img class="poster" {{bindAttr src=poster}} />
 
 </div>
