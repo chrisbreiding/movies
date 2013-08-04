@@ -5,23 +5,19 @@ Movies.RottenTomatoes =
   getInfoByMovieId: (movieId)->
     deferred = $.Deferred()
 
-    url = "#{@baseUrl}/movies/#{movieId}.json" # ?apikey =#{this.get('apiKey')}&callback =JSON_CALLBACK"
-
     $.ajax
-      url: url
+      url: "#{@baseUrl}/movies/#{movieId}.json"
       dataType: 'JSONP'
       data:
         apikey: @apiKey
       success: (movie)->
-        mapped_response =
+        deferred.resolve
           year: movie.year
           runtime: movie.runtime
           cast: movie.abridged_cast
           poster: movie.posters.profile # detailed / original / profile / thumbnail
-          mpaa_rating: movie.mpaa_rating
-          critics_rating: movie.ratings.critics_score
+          mpaaRating: movie.mpaa_rating
+          criticsRating: movie.ratings.critics_score
           link: movie.links.alternate
-
-        deferred.resolve mapped_response
 
     deferred

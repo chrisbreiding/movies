@@ -13,7 +13,7 @@
     <dd>{{humanize_bool shortlist}}</dd>
 
     <dt>Critics' Rating</dt>
-    <dd>{{rating-meter rating=critics_rating}}</dd>
+    <dd>{{rating-meter rating=criticsRating}}</dd>
 
     <dt>Year</dt>
     <dd>{{year}}</dd>
@@ -31,15 +31,15 @@
     </dd>
 
     <dt>MPAA Rating</dt>
-    <dd>{{mpaa_rating}}</dd>
+    <dd>{{mpaaRating}}</dd>
 
-    <dt>Link</dt>
-    <dd>
-      <a {{bindAttr href=link}} target="_blank">
-        View on Rotten Tomatoes <i class="icon-external-link"></i>
-      </a>
-    </dd>
   </dl>
+
+  <p>
+    <a {{bindAttr href=link}} target="_blank">
+      View on Rotten Tomatoes <i class="icon-external-link"></i>
+    </a>
+  </p>
 
   <img class="poster" {{bindAttr src=poster}} />
 
