@@ -1,9 +1,10 @@
 module Api
   class MoviesController < ApplicationController
-    respond_to :json
+    # respond_to :json
 
     def index
-      respond_with Movie.limit(50).as_json
+      render json: Movie.limit(50)#.as_json
+      # respond_with Movie.limit(50).as_json
       # if params[:genre_id]
       #   respond_with Genre.where(slug: params[:genre_id]).first.movies
       # else
@@ -12,7 +13,8 @@ module Api
     end
 
     def show
-      respond_with movie: Movie.find(params[:id])
+      render json: Movie.find(params[:id])
+      # respond_with movie: Movie.find(params[:id])
       # respond_with Movie.includes(:genres).find(params[:id])
     end
 

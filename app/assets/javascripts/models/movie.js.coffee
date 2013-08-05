@@ -5,3 +5,4 @@ Movies.Movie = DS.Model.extend
   sarah: DS.attr 'boolean'
   shortlist: DS.attr 'boolean'
   rt_id: DS.attr 'string'
+  genres: DS.hasMany 'Movies.Genre'

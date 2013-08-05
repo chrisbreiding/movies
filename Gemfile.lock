@@ -141,6 +141,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers
   coffee-rails
   compass-rails
   ember-rails
