@@ -12,6 +12,7 @@ Movies::Application.routes.draw do
 
   namespace :api do
     resources :movies
+    resources :genres
   end
 
   root to: "main#index"
