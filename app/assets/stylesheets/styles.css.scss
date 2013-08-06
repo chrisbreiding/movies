@@ -4,9 +4,9 @@
 $default-border-radius: 3px;
 $font-default: "Helvetica Neue", Arial, sans-serif;
 
-$green: #84AD5C;
-$light-green: lighten($green, 20%);
-$dark-green: darken($green, 20%);
+$base-color: #AD5C5C;
+$base-color-light: lighten($base-color, 20%);
+$base-color-dark: darken($base-color, 20%);
 
 // ---- Helpers ----
 
@@ -27,7 +27,7 @@ body {
 }
 
 h2 {
-  color: $dark-green;
+  color: $base-color-dark;
   font-size: 1.6em;
   margin: 20px 0;
 }
@@ -45,13 +45,13 @@ a {
 
 a:link,
 a:visited {
-  color: $dark-green;
+  color: $base-color;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: $dark-green;
+  color: $base-color-dark;
 }
 
 // ---- Genres ----
@@ -156,7 +156,7 @@ a:active {
 }
 
 .rating {
-  background: $light-green;
+  background: $base-color-light;
   transition: all 1s ease-out;
   width: 0;
   height: 15px;
