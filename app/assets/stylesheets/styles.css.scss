@@ -4,34 +4,31 @@
 $default-border-radius: 3px;
 $font-default: "Helvetica Neue", Arial, sans-serif;
 
-$light-green: #DCE8D1;
-$green: darken($light-green, 20%);
+$green: #84AD5C;
+$light-green: lighten($green, 20%);
 $dark-green: darken($green, 20%);
 
 // ---- Helpers ----
 
 .clearfix {
-    &:before,&:after { content:""; display:table; }
-    &:after { clear:both; }
+  &:before,&:after { content:""; display:table; }
+  &:after { clear:both; }
 }
 
 
 // ---- Base ----
 
 body {
-  background: #e3e3e3;
-  font-size: 16px;
+  background: #e3e3e3 image-url("background.jpg") -120px repeat-y;
+  font-size: 15px;
+  min-width: 320px;
+  padding: 0 420px 0 180px;
   position: relative;
 }
 
-h1 {
-  color: #2C3028;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
 h2 {
-  font-size: 1.8em;
+  color: $dark-green;
+  font-size: 1.6em;
   margin: 20px 0;
 }
 
@@ -57,45 +54,73 @@ a:active {
   color: $dark-green;
 }
 
-.selected-movie {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 300px;
-}
-
 // ---- Genres ----
 
 .genres-list {
-  background: #232323;
   color: #e3e3e3;
   margin: 0;
+  padding-top: 20px;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 150px;
+  width: 180px;
 
   li {
+    &:first-of-type {
+      border-top: solid 1px #343434;
+    }
+
     border-bottom: solid 1px #343434;
-    padding: 6px 12px;
+    padding: 5px 15px;
   }
 }
 
 // ---- Movies ----
 
-.movies {
-  margin-left: 170px;
-  padding: 20px 0;
-}
+.movies-list {
+  @extend .clearfix;
+  margin: 0;
+  padding: 20px 19px;
 
+  li {
+    float: left;
+    margin: 1px;
+    width: 280px;
+  }
+
+  a {
+    background: #FFF;
+    display: block;
+    overflow: hidden;
+    padding: 5px 30px 5px 10px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    i {
+      display: block;
+      margin-top: -8px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
 // ---- Selected Movie ----
 
 .selected-movie {
+  @extend .clearfix;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 420px;
 
   dl {
-    font-size: .9em;
+    margin-left: 120px;
   }
 
   dt {
@@ -109,13 +134,18 @@ a:active {
     border-bottom: solid 1px #d3d3d3;
     margin-left: 0;
     min-height: 18px;
-    padding: 10px 5px 10px 135px;
+    padding: 10px 15px 10px 135px;
 
     ul {
       margin: 0;
     }
   }
 
+}
+
+.poster {
+  float: left;
+  max-width: 120px;
 }
 
 .rating-valid {
@@ -126,12 +156,9 @@ a:active {
 }
 
 .rating {
-  background: $green;
+  background: $light-green;
   transition: all 1s ease-out;
   width: 0;
   height: 15px;
 }
 
-.poster {
-  max-width: 120px;
-}

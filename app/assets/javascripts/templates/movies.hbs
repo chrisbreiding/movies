@@ -1,20 +1,14 @@
 {{render 'genres'}}
 
-<div class="movies">
-
-  <h1>Movies</h1>
-
-  <ul class="movies-list">
-    {{#each model}}
-      <li>
-        {{#linkTo 'movie' this}}
-          {{title}}
-          <i class="icon-arrow-right"></i>
-        {{/linkTo}}
-      </li>
-    {{/each}}
-  </ul>
-
-</div>
+<ul class="movies-list">
+  {{#each model}}
+    <li>
+      {{#linkTo 'movie' this}}
+        {{title}}
+        <i class="icon-chevron-right"></i>
+      {{/linkTo}}
+    </li>
+  {{/each}}
+</ul>
 
 {{outlet}}

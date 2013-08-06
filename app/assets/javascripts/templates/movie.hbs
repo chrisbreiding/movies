@@ -2,6 +2,10 @@
 
   <h2>{{title}}</h2>
 
+  <a {{bindAttr href=link}} target="_blank">
+    <img class="poster" {{bindAttr src=poster}} />
+  </a>
+
   <dl>
     <dt>Seen by Chris?</dt>
     <dd>{{humanize_bool chris}}</dd>
@@ -43,13 +47,5 @@
     <dd>{{mpaaRating}}</dd>
 
   </dl>
-
-  <p>
-    <a {{bindAttr href=link}} target="_blank">
-      View on Rotten Tomatoes <i class="icon-external-link"></i>
-    </a>
-  </p>
-
-  <img class="poster" {{bindAttr src=poster}} />
 
 </div>
