@@ -1,5 +1,12 @@
 {{#if isInvalidRating}}
   No Rating
 {{else}}
-  <div class="rating" {{bindAttr style=ratingWidth}}></div>
+  <div class="rating-percent">
+    {{#if rating}}
+      {{rating}}%
+    {{/if}}
+  </div>
+  <div class="rating-meter">
+    <div class="rating-bar" {{bindAttr style=ratingWidth}}></div>
+  </div>
 {{/if}}
