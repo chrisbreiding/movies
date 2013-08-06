@@ -1,8 +1,10 @@
 Movies.RatingMeterComponent = Ember.Component.extend
-  classNameBindings: ['isValidRating:rating-valid:rating-invalid']
+  classNameBindings: ['isInvalidRating:rating-invalid:rating-valid']
 
-  isValidRating: (->
-    !isNaN(@get('rating')) && @get('rating') != -1
+  isInvalidRating: (->
+    rating = @get 'rating'
+    return false if !rating
+    isNaN(rating) or rating is -1
   ).property 'rating'
 
   ratingWidth: (->
