@@ -98,6 +98,11 @@ a:active {
     text-overflow: ellipsis;
     white-space: nowrap;
 
+    &.active {
+      background: $base-color;
+      color: #FFF;
+    }
+
     i {
       display: block;
       margin-top: -8px;
