@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: movies_development
+  pool: 5
+  username: chrisbreiding
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: movies_test
+  pool: 5
+  username: chrisbreiding
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: movies_production
+  pool: 5
+  username: chrisbreiding
+  password:
