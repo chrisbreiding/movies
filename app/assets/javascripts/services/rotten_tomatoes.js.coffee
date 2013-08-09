@@ -3,21 +3,17 @@ Movies.RottenTomatoes =
   apiKey: 'hedyxeyu7a5yggpbs7jwvsqw'
 
   getInfoByMovieId: (movieId)->
-    deferred = $.Deferred()
-
-    $.ajax
+    request = $.ajax
       url: "#{@baseUrl}/movies/#{movieId}.json"
       dataType: 'JSONP'
       data:
         apikey: @apiKey
-      success: (movie)->
-        deferred.resolve
-          year: movie.year
-          runtime: movie.runtime
-          cast: movie.abridged_cast
-          poster: movie.posters.profile # detailed / original / profile / thumbnail
-          mpaaRating: movie.mpaa_rating
-          criticsRating: movie.ratings.critics_score
-          link: movie.links.alternate
 
-    deferred
+    request.then (movie)->
+      year: movie.year
+      runtime: movie.runtime
+      cast: movie.abridged_cast
+      poster: movie.posters.profile # detailed / original / profile / thumbnail
+      mpaaRating: movie.mpaa_rating
+      criticsRating: movie.ratings.critics_score
+      link: movie.links.alternate
