@@ -1,0 +1,1733 @@
+[
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 1,
+        "rt_id": "358179513",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "007 - Casino Royale",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 2,
+        "rt_id": "770679948",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "007 - Quantum of Solace",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 3,
+        "rt_id": "10180",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "10 Things I Hate About You",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 14,
+                "name": "Teen",
+                "slug": "teen"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 4,
+        "rt_id": "18108",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "12 Angry Men",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 5,
+        "rt_id": "15508",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "12 Monkeys",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 6,
+        "rt_id": "13139",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "13th Warrior",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 7,
+        "rt_id": "14347",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "28 Days Later",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 15,
+                "name": "Thriller",
+                "slug": "thriller"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 8,
+        "rt_id": "684288203",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "3:10 to Yuma (2007)",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 18,
+                "name": "Western",
+                "slug": "western"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 9,
+        "rt_id": "5077",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "40 Year Old Virgin",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 10,
+        "rt_id": "770801801",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "500 Days of Summer",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 11,
+        "rt_id": "10240",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "A Beautiful Mind",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 12,
+        "rt_id": "10030",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "A Christmas Story",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 4,
+                "name": "Christmas",
+                "slug": "christmas"
+            },
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 13,
+        "rt_id": "15694",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "A Clockwork Orange",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 14,
+        "rt_id": "13370",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "A Fistful of Dollars",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 18,
+                "name": "Western",
+                "slug": "western"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 15,
+        "rt_id": "10373",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "A League of Their Own",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 16,
+        "rt_id": "10198",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "A Streetcar Named Desire",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 17,
+        "rt_id": "12161",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Abyss",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 19,
+        "rt_id": "10604",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Ace Ventura - When Nature Calls",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 18,
+        "rt_id": "10425",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Ace Ventura –- Pet Detective",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 20,
+        "rt_id": "13212",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Adaptation",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 21,
+        "rt_id": "12675",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Addams Family",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 22,
+        "rt_id": "12634",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Addams Family Values",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 23,
+        "rt_id": "10421",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Airplane!",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 24,
+        "rt_id": "9383",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Aladdin",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 2,
+                "name": "Animation",
+                "slug": "animation"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 25,
+        "rt_id": "130559491",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Aladdin 2: Return of Jafar",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 2,
+                "name": "Animation",
+                "slug": "animation"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 26,
+        "rt_id": "147453896",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Aladdin 3: King of Thieves",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 2,
+                "name": "Animation",
+                "slug": "animation"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 27,
+        "rt_id": "14265",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Ali",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            },
+            {
+                "id": 13,
+                "name": "Sports",
+                "slug": "sports"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 28,
+        "rt_id": "13492",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Alien 1",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 15,
+                "name": "Thriller",
+                "slug": "thriller"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 29,
+        "rt_id": "13240",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Alien 2: Aliens",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 15,
+                "name": "Thriller",
+                "slug": "thriller"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 30,
+        "rt_id": "14276",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Alien 3",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 15,
+                "name": "Thriller",
+                "slug": "thriller"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 31,
+        "rt_id": "13889",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Alien 4: Resurrection",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 15,
+                "name": "Thriller",
+                "slug": "thriller"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 32,
+        "rt_id": "10111",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Alien vs. Predator",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 15,
+                "name": "Thriller",
+                "slug": "thriller"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 33,
+        "rt_id": "769772568",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Aliens vs. Predator - Requiem",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 15,
+                "name": "Thriller",
+                "slug": "thriller"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 34,
+        "rt_id": "16994",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Almost Famous",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 35,
+        "rt_id": "13471",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Along Came a Spider",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 36,
+        "rt_id": "12878",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "American Beauty",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 37,
+        "rt_id": "17097",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "American Pie",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 38,
+        "rt_id": "17152",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "American Pie 2",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 39,
+        "rt_id": "13417",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "American Splendor",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 40,
+        "rt_id": "17033",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "American Wedding",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 41,
+        "rt_id": "13122",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Amistad",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 42,
+        "rt_id": "158719030",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "An Inconvenient Truth",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 6,
+                "name": "Documentary",
+                "slug": "documentary"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 43,
+        "rt_id": "13689",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Analyze This",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 44,
+        "rt_id": "16978",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Anchorman",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 45,
+        "rt_id": "16577",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Animal House",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 46,
+        "rt_id": "18521",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Animatrix",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 2,
+                "name": "Animation",
+                "slug": "animation"
+            },
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 47,
+        "rt_id": "10183",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Annie Hall",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 11,
+                "name": "Romantic Comedy",
+                "slug": "romantic-comedy"
+            },
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 48,
+        "rt_id": "10718",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Antz",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 2,
+                "name": "Animation",
+                "slug": "animation"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 49,
+        "rt_id": "13092",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Apocalypse Now",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 50,
+        "rt_id": "11116",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Apollo 13",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 51,
+        "rt_id": "491975117",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Aqua Teen Hunger Force Movie",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 2,
+                "name": "Animation",
+                "slug": "animation"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 52,
+        "rt_id": "12971",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "As Good As It Gets",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 11,
+                "name": "Romantic Comedy",
+                "slug": "romantic-comedy"
+            },
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 53,
+        "rt_id": "594229511",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Atonement",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 54,
+        "rt_id": "10711",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Austin Powers 1: International Man of Mystery",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 55,
+        "rt_id": "10667",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Austin Powers 2: The Spy Who Shagged Me",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 56,
+        "rt_id": "11167",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Austin Powers 3: Goldmember",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 57,
+        "rt_id": "9898",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Babe",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 3,
+                "name": "Children's",
+                "slug": "childrens"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 58,
+        "rt_id": "9994",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Babe: Pig in the City",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 3,
+                "name": "Children's",
+                "slug": "childrens"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 59,
+        "rt_id": "314388060",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Babel",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 60,
+        "rt_id": "23532",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Back to the Future 1",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 61,
+        "rt_id": "23533",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Back to the Future 2",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 62,
+        "rt_id": "23534",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Back to the Future 3",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 63,
+        "rt_id": "16986",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Bad Santa",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 64,
+        "rt_id": "13030",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Barton Fink",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 65,
+        "rt_id": "10483",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Batman 1",
+        "updated_at": "2012-11-10T23:10:20Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 66,
+        "rt_id": "10598",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Batman 2: Batman Returns",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 67,
+        "rt_id": "11174",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Batman 3: Batman Forever",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 68,
+        "rt_id": "11169",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Batman 4: Batman & Robin",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 69,
+        "rt_id": "1122",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Batman 5: Batman Begins",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 70,
+        "rt_id": "769959054",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Batman 6: The Dark Knight",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:02Z",
+        "id": 71,
+        "rt_id": "136269391",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Battle Royale",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 72,
+        "rt_id": "11900",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Beethoven",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 3,
+                "name": "Children's",
+                "slug": "childrens"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 73,
+        "rt_id": "120393377",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Beethoven's 2nd",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 3,
+                "name": "Children's",
+                "slug": "childrens"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 74,
+        "rt_id": "770676448",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Before the Devil Knows You're Dead",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 75,
+        "rt_id": "14414",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Being John Malkovich",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 76,
+        "rt_id": "9402",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Ben Hur",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 77,
+        "rt_id": "12770",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Best in Show",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 78,
+        "rt_id": "10563",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Big Daddy",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 79,
+        "rt_id": "10167",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Big Fish",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 80,
+        "rt_id": "14281",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Big Lebowski",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 81,
+        "rt_id": "11742",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Big Trouble in Little China",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 82,
+        "rt_id": "13000",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Billy Elliot",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 83,
+        "rt_id": "11546",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Billy Madison",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 84,
+        "rt_id": "10078",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Birds, The",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 15,
+                "name": "Thriller",
+                "slug": "thriller"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 85,
+        "rt_id": "10471",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Black Sheep",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 86,
+        "rt_id": "13062",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Blair Witch Project",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 15,
+                "name": "Thriller",
+                "slug": "thriller"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 87,
+        "rt_id": "770808362",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Blind Side, The",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 13,
+                "name": "Sports",
+                "slug": "sports"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 88,
+        "rt_id": "358182346",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Blood Diamond",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 89,
+        "rt_id": "13324",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Blood Simple",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 90,
+        "rt_id": "12869",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Boondock Saints",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 91,
+        "rt_id": "337720947",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Borat",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 92,
+        "rt_id": "16218",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Born On the 4th of July",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 93,
+        "rt_id": "12952",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Bottle Rocket",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            },
+            {
+                "id": 5,
+                "name": "Comedy",
+                "slug": "comedy"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 94,
+        "rt_id": "11357",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Bourne Identity",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 95,
+        "rt_id": "10084",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Bourne Supremacy",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 96,
+        "rt_id": "358189806",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Bourne Ultimatum",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 97,
+        "rt_id": "13038",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Bowling for Columbine",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 6,
+                "name": "Documentary",
+                "slug": "documentary"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 98,
+        "rt_id": "13339",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Boys Don't Cry",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 7,
+                "name": "Drama",
+                "slug": "drama"
+            }
+        ]
+    },
+    {
+        "chris": 1,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 99,
+        "rt_id": "12866",
+        "sarah": 1,
+        "shortlist": false,
+        "title": "Braveheart",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 1,
+                "name": "Action",
+                "slug": "action"
+            }
+        ]
+    },
+    {
+        "chris": 0,
+        "created_at": "2011-06-06T21:44:03Z",
+        "id": 100,
+        "rt_id": "13466",
+        "sarah": 0,
+        "shortlist": false,
+        "title": "Brazil",
+        "updated_at": "2012-11-10T23:05:37Z",
+        "genres": [
+            {
+                "id": 16,
+                "name": "Unknown",
+                "slug": "unknown"
+            }
+        ]
+    }
+]
+

@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Action",
+        "slug": "action"
+    },
+    {
+        "id": 2,
+        "name": "Animation",
+        "slug": "animation"
+    },
+    {
+        "id": 3,
+        "name": "Children's",
+        "slug": "childrens"
+    },
+    {
+        "id": 4,
+        "name": "Christmas",
+        "slug": "christmas"
+    },
+    {
+        "id": 5,
+        "name": "Comedy",
+        "slug": "comedy"
+    },
+    {
+        "id": 6,
+        "name": "Documentary",
+        "slug": "documentary"
+    },
+    {
+        "id": 7,
+        "name": "Drama",
+        "slug": "drama"
+    },
+    {
+        "id": 8,
+        "name": "Fantasy",
+        "slug": "fantasy"
+    },
+    {
+        "id": 9,
+        "name": "Horror",
+        "slug": "horror"
+    },
+    {
+        "id": 10,
+        "name": "Musical",
+        "slug": "musical"
+    },
+    {
+        "id": 11,
+        "name": "Romantic Comedy",
+        "slug": "romantic-comedy"
+    },
+    {
+        "id": 12,
+        "name": "Sci-fi",
+        "slug": "sci-fi"
+    },
+    {
+        "id": 13,
+        "name": "Sports",
+        "slug": "sports"
+    },
+    {
+        "id": 14,
+        "name": "Teen",
+        "slug": "teen"
+    },
+    {
+        "id": 15,
+        "name": "Thriller",
+        "slug": "thriller"
+    },
+    {
+        "id": 16,
+        "name": "Unknown",
+        "slug": "unknown"
+    },
+    {
+        "id": 17,
+        "name": "War",
+        "slug": "war"
+    },
+    {
+        "id": 18,
+        "name": "Western",
+        "slug": "western"
+    }
+]
