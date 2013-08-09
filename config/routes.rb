@@ -1,19 +1,19 @@
 Movies::Application.routes.draw do
 
-  # namespace :api do
-  #   resources :movies do
-  #     resources :genres
-  #   end
-
-  #   resources :genres do
-  #     resources :movies
-  #   end
-  # end
-
   namespace :api do
-    resources :movies
-    resources :genres
+    resources :movies do
+      resources :genres
+    end
+
+    resources :genres do
+      resources :movies
+    end
   end
+
+  # namespace :api do
+  #   resources :movies
+  #   resources :genres
+  # end
 
   root to: "main#index"
 
