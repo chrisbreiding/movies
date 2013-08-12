@@ -4,4 +4,12 @@ Movies.Movie = DS.Model.extend
   sarah: DS.attr 'boolean'
   shortlist: DS.attr 'boolean'
   rt_id: DS.attr 'string'
+  year: DS.attr 'number'
+  runtime: DS.attr 'number'
+  poster_profile: DS.attr 'string'
+  mpaa_rating: DS.attr 'string'
+  critics_score: DS.attr 'number'
+  audience_score: DS.attr 'number'
+  actors: DS.hasMany 'Movies.Actor'
   genres: DS.hasMany 'Movies.Genre'
+

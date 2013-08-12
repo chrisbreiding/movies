@@ -28,7 +28,10 @@
   </dd>
 
   <dt>Critics' Rating</dt>
-  <dd>{{rating-meter rating=criticsRating}}</dd>
+  <dd>{{rating-meter rating=critics_score}}</dd>
+
+  <dt>Audience Rating</dt>
+  <dd>{{rating-meter rating=audience_score}}</dd>
 
   <dt>Year</dt>
   <dd>{{year}}</dd>
@@ -39,14 +42,14 @@
   <dt>Cast</dt>
   <dd>
     <ul>
-      {{#each cast}}
+      {{#each actors}}
         <li>{{name}}</li>
       {{/each}}
     </ul>
   </dd>
 
   <dt>MPAA Rating</dt>
-  <dd>{{mpaaRating}}</dd>
+  <dd>{{mpaa_rating}}</dd>
 
 </dl>
 

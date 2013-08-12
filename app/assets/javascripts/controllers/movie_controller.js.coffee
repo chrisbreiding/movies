@@ -14,3 +14,7 @@ Movies.MovieController = Ember.ObjectController.extend
     else
       'Genres'
   ).property 'genres'
+
+  link: (->
+    "http://rottentomatoes.com/m/#{@get('rt_id')}"
+  ).property 'rt_id'
