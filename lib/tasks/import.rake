@@ -84,14 +84,16 @@ namespace :import do
 
         puts "... creating actors"
         movie_data['abridged_cast'].each do |actor|
-          actor_model = Actor.find_by_rt_id actor['id']
-          if !actor_model
-            actor_model = Actor.create(
-              name: actor['name'],
-              rt_id: actor['id']
-            )
+          unless movie.actors.map(&:rt_id).include? actor['id']
+            actor_model = Actor.find_by_rt_id actor['id']
+            if !actor_model
+              actor_model = Actor.create(
+                name: actor['name'],
+                rt_id: actor['id']
+              )
+            end
+            movie.actors << actor_model
           end
-          movie.actors << actor_model
         end
       end
     end
