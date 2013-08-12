@@ -15,7 +15,6 @@ $base-color-dark: darken($base-color, 20%);
   &:after { clear:both; }
 }
 
-
 // ---- Base ----
 
 body {
@@ -114,6 +113,7 @@ a:active {
     }
   }
 }
+
 // ---- Selected Movie ----
 
 .selected-movie {
@@ -170,4 +170,26 @@ a:active {
 
 .rating-percent {
   float: right;
+}
+
+// ---- Views / Components ----
+
+.icon-button {
+  background: none;
+  border: none;
+  color: $base-color;
+  cursor: pointer;
+  float: right;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+
+  &:hover {
+    color: $base-color-dark;
+  }
+
+  span {
+    position: absolute;
+    left: -9999px;
+  }
 }
