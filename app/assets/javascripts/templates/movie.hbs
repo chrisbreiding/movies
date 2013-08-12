@@ -1,4 +1,4 @@
-<div class="selected-movie">
+<div {{bindAttr class=":selected-movie isEditing:editing"}}>
   {{#if isEditing}}
     {{partial 'edit_movie'}}
   {{else}}

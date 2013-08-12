@@ -2,4 +2,51 @@
   Done
 {{/view}}
 
-Edit the movie.
+<h2>{{view Ember.TextField valueBinding="title"}}</h2>
+
+<a {{bindAttr href=link}} target="_blank" title="View on Rotten Tomatoes">
+  <img class="poster" {{bindAttr src=poster}} />
+</a>
+
+<dl>
+  <dt>Seen by Chris?</dt>
+  <dd>{{view Ember.Checkbox checkedBinding="chris"}}</dd>
+
+  <dt>Seen by Sarah?</dt>
+  <dd>{{view Ember.Checkbox checkedBinding="sarah"}}</dd>
+
+  <dt>On Shortlist?</dt>
+  <dd>{{view Ember.Checkbox checkedBinding="shortlist"}}</dd>
+
+  <dt>{{genresInflected}}</dt>
+  <dd>
+    <ul>
+      {{#each genres}}
+        <li>{{name}}</li>
+      {{/each}}
+    </ul>
+  </dd>
+
+  <dt>Critics' Rating</dt>
+  <dd>{{rating-meter rating=criticsRating}}</dd>
+
+  <dt>Year</dt>
+  <dd>{{year}}</dd>
+
+  <dt>Runtime</dt>
+  <dd>{{minutes_to_mixed runtime}}</dd>
+
+  <dt>Cast</dt>
+  <dd>
+    <ul>
+      {{#each cast}}
+        <li>{{name}}</li>
+      {{/each}}
+    </ul>
+  </dd>
+
+  <dt>MPAA Rating</dt>
+  <dd>{{mpaaRating}}</dd>
+
+</dl>
+
