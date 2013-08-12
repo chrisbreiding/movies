@@ -1,7 +1,7 @@
 {{render 'genres'}}
 
 <ul class="movies-list">
-  {{#each model}}
+  {{#each controller.arrangedContent}}
     <li>
       {{#linkTo 'movie' this}}
         {{title}}

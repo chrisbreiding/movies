@@ -2,7 +2,7 @@ module Api
   class MoviesController < ApplicationController
 
     def index
-      render json: Movie.limit(50)
+      render json: Movie.limit(50).order('title')
       # if params[:genre_id]
       #   respond_with Genre.where(slug: params[:genre_id]).first.movies
       # else
