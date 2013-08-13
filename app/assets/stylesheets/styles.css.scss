@@ -18,7 +18,7 @@ $base-color-dark: darken($base-color, 20%);
 // ---- Base ----
 
 body {
-  background: #e3e3e3 image-url("background.jpg") -120px repeat-y;
+  background: #e3e3e3 image-url("background.jpg") -120px 0 repeat-y;
   font-size: 15px;
   min-width: 320px;
   padding: 0 420px 0 180px;
@@ -201,5 +201,45 @@ input {
   span {
     position: absolute;
     left: -9999px;
+  }
+}
+
+$toggle-width: 80px;
+$toggle-height: 25px;
+
+.toggle {
+  background: #545454;
+  border: solid 1px #545454;
+  position: relative;
+  width: $toggle-width;
+  height: $toggle-height;
+
+  button {
+    background: none;
+    border: none;
+    color: #f8f8f8;
+    cursor: pointer;
+    float: left;
+    width: $toggle-width / 2;
+    height: $toggle-height;
+  }
+}
+
+.toggle-cover {
+  background: #f8f8f8;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: .3s all ease-out;
+  width: $toggle-width / 2;
+  height: $toggle-height;
+}
+
+.toggle-on {
+  background: $base-color;
+  border-color: $base-color;
+
+  .toggle-cover {
+    left: $toggle-width / 2;
   }
 }
