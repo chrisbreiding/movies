@@ -1,6 +1,7 @@
-{{#view Movies.IconButton action="doneEditing" icon="ok"}}
-  Done
-{{/view}}
+<button class="icon-button" {{action 'doneEditing'}}>
+  <i class="icon-ok"></i>
+  <span>Done</span>
+</button>
 
 <h2>{{view Ember.TextField valueBinding="title"}}</h2>
 
