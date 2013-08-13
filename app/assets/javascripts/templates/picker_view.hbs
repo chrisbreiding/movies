@@ -1,0 +1,17 @@
+<ul class="picker-picked">
+  {{#each view.picked}}
+    <li>
+      {{picker_label this view.labelProperty}}
+      {{view view.iconRemove}}
+    </li>
+  {{/each}}
+</ul>
+
+<ul class="picker-unpicked">
+  {{#each view.unpicked}}
+    <li>
+      {{picker_label this view.labelProperty}}
+      {{view view.iconAdd}}
+    </li>
+  {{/each}}
+</ul>

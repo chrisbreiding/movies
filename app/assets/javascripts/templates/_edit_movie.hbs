@@ -21,11 +21,7 @@
 
   <dt>{{genresInflected}}</dt>
   <dd>
-    <ul>
-      {{#each genres}}
-        <li>{{name}}</li>
-      {{/each}}
-    </ul>
+    {{view Movies.PickerView collectionBinding="allGenres" pickedBinding="genres" labelProperty="name"}}
   </dd>
 
   <dt>Critics' Rating</dt>

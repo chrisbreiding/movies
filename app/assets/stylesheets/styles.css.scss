@@ -184,6 +184,8 @@ input {
 
 // ---- Views / Components ----
 
+// Icon Button
+
 .icon-button {
   background: none;
   border: none;
@@ -203,6 +205,8 @@ input {
     left: -9999px;
   }
 }
+
+// Toggle Switch
 
 $toggle-width: 60px;
 $toggle-height: 20px;
@@ -259,4 +263,44 @@ $toggle-height: 20px;
   background: #f8f8f8;
   width: $toggle-width * (1/3);
   height: $toggle-height;
+}
+
+// Picker
+
+.picker {
+  li {
+    position: relative;
+
+    i {
+      color: $base-color;
+      font-size: 12px;
+      position: absolute;
+      top: 50%;
+      margin-top: -6px;
+      width: 12px;
+      height: 12px;
+
+      &:hover {
+        color: $base-color-dark;
+      }
+    }
+  }
+}
+
+.picker-picked {
+  li i {
+    cursor: pointer;
+    right: 0;
+  }
+}
+
+.picker-unpicked {
+  li {
+    cursor: pointer;
+    padding-left: 20px;
+
+    i {
+      left: 0;
+    }
+  }
 }
