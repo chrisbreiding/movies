@@ -1,8 +1,7 @@
-Movies.ToggleView = Ember.View.extend
-
-  templateName: 'toggle_view'
+Movies.ToggleSwitchComponent = Ember.Component.extend
 
   classNames: ['toggle']
+
   classNameBindings: ['toggle:toggle-on']
 
   click: ->
