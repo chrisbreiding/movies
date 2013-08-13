@@ -204,42 +204,59 @@ input {
   }
 }
 
-$toggle-width: 80px;
-$toggle-height: 25px;
+$toggle-width: 60px;
+$toggle-height: 20px;
 
 .toggle {
   background: #545454;
   border: solid 1px #545454;
+  cursor: pointer;
+  overflow: hidden;
   position: relative;
   width: $toggle-width;
-  height: $toggle-height;
-
-  button {
-    background: none;
-    border: none;
-    color: #f8f8f8;
-    cursor: pointer;
-    float: left;
-    width: $toggle-width / 2;
-    height: $toggle-height;
-  }
-}
-
-.toggle-cover {
-  background: #f8f8f8;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transition: .3s all ease-out;
-  width: $toggle-width / 2;
   height: $toggle-height;
 }
 
 .toggle-on {
-  background: $base-color;
   border-color: $base-color;
+}
 
-  .toggle-cover {
-    left: $toggle-width / 2;
+.toggle-slider {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  transition: .2s all ease-out;
+  width: $toggle-width + $toggle-width * (2/3);
+  height: $toggle-height;
+
+  .toggle-on & {
+    left: 0
   }
+
+  div {
+    float: left;
+  }
+}
+
+.toggle-label {
+  color: #f8f8f8;
+  font-size: .9em;
+  text-align: center;
+  width: $toggle-width * (2/3);
+  height: $toggle-height;
+  line-height: $toggle-height;
+}
+
+.toggle-label-on {
+  background: $base-color;
+}
+
+.toggle-label-off {
+  background: #545454;
+}
+
+.toggle-switch {
+  background: #f8f8f8;
+  width: $toggle-width * (1/3);
+  height: $toggle-height;
 }
