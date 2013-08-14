@@ -2,32 +2,34 @@ Movies.PickerView = Ember.View.extend
 
   templateName: 'picker_view'
 
+  tagName: 'ul'
+
   classNames: ['picker']
 
-  unpicked: (->
-    collection = @get 'collection'
-    picked = @get 'picked'
+  itemView: Ember.View.extend
 
-    collection.filter (item)->
-      !picked.map( (pickedItem)->
-        pickedItem.get('id')
-      ).contains item.get('id')
-  ).property('picked.@each', 'collection.@each')
+    tagName: 'li'
 
-  iconRemove: Ember.View.extend
+    templateName: 'picker_item'
 
-    tagName: 'i'
+    classNameBindings: ['isPicked']
 
-    classNames: ['icon-remove']
+    isPicked: (->
+      @get('parentView.picked').map( (item)->
+        item.get('id')
+      ).contains @get('item.id')
+    ).property 'item', 'parentView.picked.@each'
 
-    click: ->
-      debugger
-
-  iconAdd: Ember.View.extend
-
-    tagName: 'i'
-
-    classNames: ['icon-plus']
+    label: (->
+      @get('item').get @get('labelProperty')
+    ).property 'item', 'labelProperty'
 
     click: ->
-      debugger
+      picked = @get 'parentView.picked'
+      if @get 'isPicked'
+        picked.removeObject @get('item')
+      else
+        picked.pushObject @get('item')
+
+
+

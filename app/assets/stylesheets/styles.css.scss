@@ -269,38 +269,18 @@ $toggle-height: 20px;
 
 .picker {
   li {
+    color: #545454;
+    cursor: pointer;
+    padding: 3px 6px;
     position: relative;
 
-    i {
-      color: $base-color;
-      font-size: 12px;
-      position: absolute;
-      top: 50%;
-      margin-top: -6px;
-      width: 12px;
-      height: 12px;
-
-      &:hover {
-        color: $base-color-dark;
-      }
+    &:hover {
+      background: $base-color-light;
     }
-  }
-}
 
-.picker-picked {
-  li i {
-    cursor: pointer;
-    right: 0;
-  }
-}
-
-.picker-unpicked {
-  li {
-    cursor: pointer;
-    padding-left: 20px;
-
-    i {
-      left: 0;
+    &.is-picked {
+      background: $base-color;
+      color: #f8f8f8;
     }
   }
 }
