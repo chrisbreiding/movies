@@ -1,5 +1,6 @@
 @import "reset";
 @import "compass/css3";
+@import "font-awesome";
 
 $default-border-radius: 3px;
 $font-default: "Helvetica Neue", Arial, sans-serif;
@@ -268,19 +269,39 @@ $toggle-height: 20px;
 // Picker
 
 .picker {
+  font-size: .9em;
+
   li {
-    color: #545454;
+    color: #878787;
     cursor: pointer;
-    padding: 3px 6px;
     position: relative;
 
+    i:before {
+      content: $check-empty;
+    }
+
     &:hover {
-      background: $base-color-light;
+      color: $base-color;
+
+      i:before {
+        content: $plus-sign-alt;
+      }
     }
 
     &.is-picked {
-      background: $base-color;
-      color: #f8f8f8;
+      color: $base-color-dark;
+
+      i:before {
+        content: $sign-blank;
+      }
+
+      &:hover {
+        color: $base-color;
+
+        i:before {
+          content: $minus-sign-alt;
+        }
+      }
     }
   }
 }
