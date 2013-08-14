@@ -14,7 +14,7 @@ group :assets do
   gem 'jquery-rails'
 
   gem 'ember-rails'
-  gem 'ember-source', '1.0.0.rc6.4'
+  gem 'ember-source', '1.0.0.rc7'
 
   gem 'therubyracer'
   gem 'execjs'
