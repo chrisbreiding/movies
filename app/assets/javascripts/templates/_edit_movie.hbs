@@ -5,11 +5,7 @@
 
 <h2>{{view Ember.TextField valueBinding="title"}}</h2>
 
-<a {{bindAttr href=link}} target="_blank" title="View on Rotten Tomatoes">
-  <img class="poster" {{bindAttr src=poster_profile}} />
-</a>
-
-<dl>
+<dl class="edit-toggles">
   <dt>Seen by Chris?</dt>
   <dd>{{toggle-switch toggleBinding="chris" on="Yes" off="No"}}</dd>
 
@@ -18,12 +14,30 @@
 
   <dt>On Shortlist?</dt>
   <dd>{{toggle-switch toggleBinding="shortlist" on="Yes" off="No"}}</dd>
+</dl>
 
+<dl class="edit-genres">
   <dt>{{genresInflected}}</dt>
   <dd>
     {{view Movies.PickerView collectionBinding="allGenres" pickedBinding="genres" labelProperty="name"}}
   </dd>
+</dl>
 
+<p class="edit-rt-message">Search Rotten Tomatoes for the rest of the information:</p>
+
+<form class="edit-rt-search" {{action 'searchRT' on="submit"}}>
+  {{view Ember.TextField valueBinding="rtSearch"}}
+  <button type="submit" class="icon-button icon-button-rt-search">
+    <i class="icon-search"></i>
+    <span>Search</span>
+  </button>
+</form>
+
+<a class="poster" {{bindAttr href=link}} target="_blank" title="View on Rotten Tomatoes">
+  <img {{bindAttr src=poster_profile}} />
+</a>
+
+<dl>
   <dt>Critics' Rating</dt>
   <dd>{{rating-meter rating=critics_score}}</dd>
 

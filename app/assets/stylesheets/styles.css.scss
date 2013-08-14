@@ -60,129 +60,6 @@ input {
   padding: 6px 12px;
 }
 
-// ---- Genres ----
-
-.genres-list {
-  color: #e3e3e3;
-  margin: 0;
-  padding-top: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 180px;
-
-  li {
-    &:first-of-type {
-      border-top: solid 1px #343434;
-    }
-
-    border-bottom: solid 1px #343434;
-    padding: 5px 15px;
-  }
-}
-
-// ---- Movies ----
-
-.movies-list {
-  @extend .clearfix;
-  margin: 0;
-  padding: 20px 19px;
-
-  li {
-    float: left;
-    margin: 1px;
-    width: 280px;
-  }
-
-  a {
-    background: #FFF;
-    display: block;
-    overflow: hidden;
-    padding: 5px 30px 5px 10px;
-    position: relative;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-    &.active {
-      background: $base-color;
-      color: #FFF;
-    }
-
-    i {
-      display: block;
-      margin-top: -8px;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      width: 16px;
-      height: 16px;
-    }
-  }
-}
-
-// ---- Selected Movie ----
-
-.selected-movie {
-  @extend .clearfix;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 420px;
-
-  dl {
-    margin-left: 120px;
-  }
-
-  dt {
-    float: left;
-    padding-top: 10px;
-    text-align: right;
-    width: 120px;
-  }
-
-  dd {
-    border-bottom: solid 1px #d3d3d3;
-    margin-left: 0;
-    min-height: 18px;
-    padding: 10px 15px 10px 135px;
-
-    ul {
-      margin: 0;
-    }
-  }
-}
-
-.editing h2 input {
-  font-size: .7em;
-  width: 70%;
-}
-
-.poster {
-  background: image-url("ajax-loader.gif") 50% 50% no-repeat;
-  float: left;
-  max-width: 120px;
-}
-
-.rating-valid .rating-meter {
-  background: #333;
-  padding: 5px;
-  width: 100px;
-  height: 15px;
-}
-
-.rating-bar {
-  background: $base-color-light;
-  transition: all 1s ease-out;
-  width: 0;
-  height: 15px;
-}
-
-.rating-percent {
-  float: right;
-}
-
 // ---- Views / Components ----
 
 // Icon Button
@@ -304,4 +181,178 @@ $toggle-height: 20px;
       }
     }
   }
+}
+
+// ---- Genres ----
+
+.genres-list {
+  color: #e3e3e3;
+  margin: 0;
+  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 180px;
+
+  li {
+    &:first-of-type {
+      border-top: solid 1px #343434;
+    }
+
+    border-bottom: solid 1px #343434;
+    padding: 5px 15px;
+  }
+}
+
+// ---- Movies ----
+
+.movies-list {
+  @extend .clearfix;
+  margin: 0;
+  padding: 20px 19px;
+
+  li {
+    float: left;
+    margin: 1px;
+    width: 280px;
+  }
+
+  a {
+    background: #FFF;
+    display: block;
+    overflow: hidden;
+    padding: 5px 30px 5px 10px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &.active {
+      background: $base-color;
+      color: #FFF;
+    }
+
+    i {
+      display: block;
+      margin-top: -8px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+// ---- Selected Movie ----
+
+.selected-movie {
+  @extend .clearfix;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 420px;
+
+  dl {
+    margin-left: 120px;
+  }
+
+  dt {
+    float: left;
+    padding-top: 10px;
+    text-align: right;
+    width: 120px;
+  }
+
+  dd {
+    border-bottom: solid 1px #d3d3d3;
+    margin-left: 0;
+    min-height: 18px;
+    padding: 10px 15px 10px 135px;
+
+    ul {
+      margin: 0;
+    }
+  }
+}
+
+.poster {
+  background: image-url("ajax-loader.gif") 50% 50% no-repeat;
+  float: left;
+  max-width: 120px;
+  min-height: 120px;
+}
+
+.rating-valid .rating-meter {
+  background: #333;
+  padding: 5px;
+  width: 100px;
+  height: 15px;
+}
+
+.rating-bar {
+  background: $base-color-light;
+  transition: all 1s ease-out;
+  width: 0;
+  height: 15px;
+}
+
+.rating-percent {
+  float: right;
+}
+
+// Edit Mode
+
+.editing h2 input {
+  font-size: .7em;
+  width: 70%;
+}
+
+.selected-movie {
+  .edit-toggles,
+  .edit-genres {
+    margin-left: 0;
+  }
+
+  .edit-toggles {
+    float: left;
+    width: 55%;
+  }
+
+  .edit-genres {
+    float: right;
+    width: 45%;
+
+    dt {
+      float: none;
+      margin-left: 10px;
+      text-align: left;
+      width: auto;
+    }
+
+    dd {
+      padding: 10px 15px;
+    }
+  }
+}
+.edit-rt-message {
+  clear: both;
+}
+
+.edit-rt-search {
+  @extend .clearfix;
+
+  input {
+    float: left;
+    width: 80%;
+  }
+
+  .icon-button-rt-search {
+    margin-top: 2px;
+  }
+}
+
+.editing .poster {
+  margin-top: 20px;
 }

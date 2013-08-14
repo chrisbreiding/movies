@@ -18,3 +18,6 @@ Movies.MovieController = Ember.ObjectController.extend
   link: (->
     "http://rottentomatoes.com/m/#{@get('rt_id')}"
   ).property 'rt_id'
+
+  searchRT: ->
+    console.log @get('rtSearch')
