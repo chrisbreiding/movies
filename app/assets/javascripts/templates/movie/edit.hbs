@@ -21,9 +21,9 @@
       </dd>
     </dl>
 
-    <p class="edit-rt-message">Search Rotten Tomatoes for the rest of the information:</p>
+    <p class="rt-message">Search Rotten Tomatoes for the rest of the information:</p>
 
-    <form class="edit-rt-search" {{action 'searchRT' on="submit"}}>
+    <form class="rt-search" {{action 'searchRT' on="submit"}}>
       {{view Ember.TextField valueBinding="rtSearchQuery"}}
       <button type="submit" class="icon-button icon-button-rt-search">
         <i class="icon-search"></i>
@@ -31,46 +31,53 @@
       </button>
     </form>
 
-    <a class="poster" {{bindAttr href=link}} target="_blank" title="View on Rotten Tomatoes">
-      <img {{bindAttr src=poster_profile}} />
-    </a>
+    <ul class="rt-search-results">
 
-    <dl>
-      <dt>Critics' Rating</dt>
-      <dd>{{rating-meter rating=critics_score}}</dd>
+    </ul>
 
-      <dt>Audience Rating</dt>
-      <dd>{{rating-meter rating=audience_score}}</dd>
+    <div class="rt-info">
+      <a class="poster" {{bindAttr href=link}} target="_blank" title="View on Rotten Tomatoes">
+        <img {{bindAttr src=poster_profile}} />
+      </a>
 
-      <dt>Year</dt>
-      <dd>{{year}}</dd>
+      <dl>
+        <dt>Critics' Rating</dt>
+        <dd>{{rating-meter rating=critics_score}}</dd>
 
-      <dt>Runtime</dt>
-      <dd>{{minutes_to_mixed runtime}}</dd>
+        <dt>Audience Rating</dt>
+        <dd>{{rating-meter rating=audience_score}}</dd>
 
-      <dt>Cast</dt>
-      <dd>
-        <ul>
-          {{#each actors}}
-            <li>{{name}}</li>
-          {{/each}}
-        </ul>
-      </dd>
+        <dt>Year</dt>
+        <dd>{{year}}</dd>
 
-      <dt>MPAA Rating</dt>
-      <dd>{{mpaa_rating}}</dd>
+        <dt>Runtime</dt>
+        <dd>{{minutes_to_mixed runtime}}</dd>
 
-    </dl>
+        <dt>Cast</dt>
+        <dd>
+          <ul>
+            {{#each actors}}
+              <li>{{name}}</li>
+            {{/each}}
+          </ul>
+        </dd>
 
-    <button class="icon-button" {{action 'save'}}>
-      <i class="icon-ok"></i>
-      <span>Save</span>
-    </button>
+        <dt>MPAA Rating</dt>
+        <dd>{{mpaa_rating}}</dd>
+      </dl>
+    </div>
 
-    <button class="icon-button" {{action 'cancel'}}>
-      <i class="icon-ban-circle"></i>
-      <span>Cancel</span>
-    </button>
+    <div class="actions">
+      <button class="icon-button" {{action 'save'}}>
+        <i class="icon-ok"></i>
+        <span>Save</span>
+      </button>
+
+      <button class="icon-button" {{action 'cancel'}}>
+        <i class="icon-ban-circle"></i>
+        <span>Cancel</span>
+      </button>
+    </div>
 
   </div>
 {{/shadow-box}}

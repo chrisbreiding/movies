@@ -69,7 +69,7 @@ input {
 // Shadow Box
 
 .shadow-box {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.5);
   position: fixed;
   top: 0;
   right: 0;
@@ -77,11 +77,10 @@ input {
   left: 0;
 }
 
-$shadow-box-inset: 15px;
+$shadow-box-inset: 20px;
 
 .shadow-box-container {
   background: #f8f8f8;
-  border: solid 1px #c7c7c7;
   overflow-y: auto;
   position: absolute;
   top: $shadow-box-inset;
@@ -344,15 +343,14 @@ $toggle-height: 20px;
 // ---- Edit Movie ----
 
 .edit-movie {
-  padding: 15px;
-}
+  @extend .clearfix;
+  padding: 15px 15px 50px;
 
-.editing h2 input {
-  font-size: .7em;
-  width: 70%;
-}
+  h2 input {
+    font-size: .7em;
+    width: 70%;
+  }
 
-.selected-movie {
   .edit-toggles,
   .edit-genres {
     margin-left: 0;
@@ -360,12 +358,14 @@ $toggle-height: 20px;
 
   .edit-toggles {
     float: left;
-    width: 55%;
+    width: 40%;
   }
 
   .edit-genres {
     float: right;
-    width: 45%;
+    margin-top: 0;
+    margin-left: 10%;
+    width: 50%;
 
     dt {
       float: none;
@@ -375,28 +375,70 @@ $toggle-height: 20px;
     }
 
     dd {
+      @extend .clearfix;
+      border: none;
       padding: 10px 15px;
     }
+
+    li {
+      float: left;
+      width: 50%;
+    }
   }
-}
 
-.edit-rt-message {
-  clear: both;
-}
+  .rt-message {
+    border-top: solid 1px #d3d3d3;
+    clear: both;
+    padding-top: 15px;
+  }
 
-.edit-rt-search {
-  @extend .clearfix;
+  .rt-search {
+    @extend .clearfix;
+    margin: 0 100px;
 
-  input {
+    input {
+      float: left;
+      width: 80%;
+    }
+
+    .icon-button {
+      float: right;
+      margin: 0;
+
+      span {
+        line-height: 22px;
+      }
+    }
+  }
+
+  .rt-search-results {
     float: left;
-    width: 80%;
+    width: 40%;
   }
 
-  .icon-button-rt-search {
-    margin-top: 2px;
+  .rt-info {
+    float: right;
+    min-width: 420px;
+    width: 50%;
   }
-}
 
-.editing .poster {
-  margin-top: 20px;
+  .poster {
+    margin-top: 20px;
+  }
+
+  .actions {
+    @extend .clearfix;
+    background: rgba(240,240,240,0.9);
+    border-top: solid 1px #d3d3d3;
+    padding: 10px 0;
+    position: fixed;
+    right: $shadow-box-inset;
+    bottom: $shadow-box-inset;
+    left: $shadow-box-inset;
+
+    .icon-button {
+      margin-top: 0;
+    }
+  }
+
 }
