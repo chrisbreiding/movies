@@ -7,7 +7,7 @@ Movies.MovieEditController = Ember.ObjectController.extend
       'Genre'
     else
       'Genres'
-  ).property 'genres'
+  ).property 'genres.length'
 
   link: (->
     rt.getMovieLinkById @get('rt_id')
