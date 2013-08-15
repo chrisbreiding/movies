@@ -31,6 +31,7 @@ Movies.rottenTomatoes =
       data:
         apikey: @apiKey
         q: query
+        page_limit: 15
 
     request.then (response)->
       movies = response.movies

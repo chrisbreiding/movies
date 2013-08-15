@@ -61,6 +61,7 @@ a:active {
 input {
   border: solid 1px #c7c7c7;
   font-family: $font-default;
+  font-size: 14px;
   padding: 6px 12px;
 }
 
@@ -393,27 +394,66 @@ $toggle-height: 20px;
   }
 
   .rt-search {
-    @extend .clearfix;
-    margin: 0 100px;
+    float: left;
+    width: 340px;
 
-    input {
-      float: left;
-      width: 80%;
-    }
+    form {
+      @extend .clearfix;
 
-    .icon-button {
-      float: right;
-      margin: 0;
+      input {
+        float: left;
+        margin-right: 15px;
+        width: 220px
+      }
 
-      span {
-        line-height: 22px;
+      .icon-button {
+        float: left;
+        margin: 3px 0 0;
+
+        span {
+          line-height: 22px;
+        }
       }
     }
-  }
 
-  .rt-search-results {
-    float: left;
-    width: 40%;
+    .rt-searching {
+      background: image-url("ajax-loader.gif") 50% 50% no-repeat;
+      float: left;
+      width: 50px;
+      height: 30px;
+    }
+
+    $rt-search-results-width: 244px;
+
+    ul {
+      background: #e3e3e3;
+      border-left: solid 1px #b3b3b3;
+      border-right: solid 1px #b3b3b3;
+      margin: 0;
+      width: $rt-search-results-width;
+
+      li {
+        border-bottom: solid 1px #b3b3b3;
+        font-size: .8em;
+        padding: 3px 6px;
+
+        button {
+          background: none;
+          border: none;
+          color: #545454;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+
+    .rt-no-results {
+      color: #545454;
+      font-size: .9em;
+      text-align: center;
+      margin-top: 10px;
+      width: $rt-search-results-width;
+    }
   }
 
   .rt-info {

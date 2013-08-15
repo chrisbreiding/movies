@@ -23,17 +23,30 @@
 
     <p class="rt-message">Search Rotten Tomatoes for the rest of the information:</p>
 
-    <form class="rt-search" {{action 'searchRT' on="submit"}}>
-      {{view Ember.TextField valueBinding="rtSearchQuery"}}
-      <button type="submit" class="icon-button icon-button-rt-search">
-        <i class="icon-search"></i>
-        <span>Search</span>
-      </button>
-    </form>
+    {{#view Movies.RtSearchView}}
+      <form {{action 'searchRT' on="submit"}}>
+        {{view Ember.TextField valueBinding="rtSearchQuery"}}
 
-    <ul class="rt-search-results">
+        {{#if searching}}
+          <div class="rt-searching"></div>
+        {{else}}
+          <button type="submit" class="icon-button icon-button-rt-search">
+            <i class="icon-search"></i>
+            <span>Search</span>
+          </button>
+        {{/if}}
+      </form>
 
-    </ul>
+      <ul>
+        {{#each searchResults}}
+          <li>{{title}}</li>
+        {{/each}}
+      </ul>
+
+      {{#if noResults}}
+        <div class="rt-no-results">No Results</div>
+      {{/if}}
+    {{/view}}
 
     <div class="rt-info">
       <a class="poster" {{bindAttr href=link}} target="_blank" title="View on Rotten Tomatoes">

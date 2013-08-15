@@ -2,6 +2,10 @@ rt = Movies.rottenTomatoes
 
 Movies.MovieEditController = Ember.ObjectController.extend
 
+  searching: false
+
+  noResults: false
+
   genresInflected: (->
     if @get('genres.length') is 1
       'Genre'
@@ -14,10 +18,21 @@ Movies.MovieEditController = Ember.ObjectController.extend
   ).property 'rt_id'
 
   searchRT: ->
-    console.log "Search RT for: #{@get('rtSearchQuery')}"
+    @set 'searching', true
+    @set 'noResults', false
+    query = @get 'rtSearchQuery'
 
-    rt.search(@get('rtSearchQuery')).done (movies)->
-      console.log movies
+    if query
+      rt.search(query).done (movies)=>
+        @set 'searching', false
+        @set 'searchResults', movies
+        @set 'noResults', !movies.length
+
+  previousResult: ->
+    debugger
+
+  nextResult: ->
+    debugger
 
   save: ->
     # validate
