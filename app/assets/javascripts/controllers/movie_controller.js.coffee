@@ -1,3 +1,5 @@
+rt = Movies.rottenTomatoes
+
 Movies.MovieController = Ember.ObjectController.extend
 
   isEditing: false
@@ -16,8 +18,11 @@ Movies.MovieController = Ember.ObjectController.extend
   ).property 'genres'
 
   link: (->
-    "http://rottentomatoes.com/m/#{@get('rt_id')}"
+    rt.getMovieLinkById @get('rt_id')
   ).property 'rt_id'
 
   searchRT: ->
-    console.log @get('rtSearch')
+    console.log "Search RT for: #{@get('rtSearchQuery')}"
+
+    rt.search(@get('rtSearchQuery')).done (movies)->
+      console.log movies

@@ -26,7 +26,7 @@
 <p class="edit-rt-message">Search Rotten Tomatoes for the rest of the information:</p>
 
 <form class="edit-rt-search" {{action 'searchRT' on="submit"}}>
-  {{view Ember.TextField valueBinding="rtSearch"}}
+  {{view Ember.TextField valueBinding="rtSearchQuery"}}
   <button type="submit" class="icon-button icon-button-rt-search">
     <i class="icon-search"></i>
     <span>Search</span>
