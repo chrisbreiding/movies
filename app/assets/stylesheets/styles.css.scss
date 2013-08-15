@@ -74,13 +74,20 @@ input {
   margin-top: 20px;
   margin-right: 20px;
 
-  &:hover {
-    color: $base-color-dark;
+  i {
+    float: left;
   }
 
   span {
-    position: absolute;
-    left: -9999px;
+    display: block;
+    font-size: 15px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 25px;
+  }
+
+  &:hover {
+    color: $base-color-dark;
   }
 }
 
@@ -247,12 +254,16 @@ $toggle-height: 20px;
 // ---- Selected Movie ----
 
 .selected-movie {
-  @extend .clearfix;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   width: 420px;
+}
+
+.selected-movie,
+.edit-movie {
+  @extend .clearfix;
 
   dl {
     margin-left: 120px;
@@ -302,7 +313,17 @@ $toggle-height: 20px;
   float: right;
 }
 
-// Edit Mode
+// ---- Edit Movie ----
+
+.edit-movie {
+  background: #d3d3d3;
+  padding: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+}
 
 .editing h2 input {
   font-size: .7em;
