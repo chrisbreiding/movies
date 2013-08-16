@@ -1,7 +1,7 @@
 {{#shadow-box}}
   <div class="edit-movie">
 
-    <h2>{{view Ember.TextField valueBinding="title"}}</h2>
+    {{view Ember.TextField valueBinding="title" class="edit-title"}}
 
     <dl class="edit-toggles">
       <dt>Seen by Chris?</dt>
@@ -28,7 +28,9 @@
         {{view Ember.TextField valueBinding="rtSearchQuery"}}
 
         {{#if searching}}
-          <div class="rt-searching"></div>
+          <div class="rt-searching">
+            <i class="icon-spinner icon-spin"></i>
+          </div>
         {{else}}
           <button type="submit" class="icon-button icon-button-rt-search">
             <i class="icon-search"></i>
@@ -39,7 +41,7 @@
 
       <ul>
         {{#each searchResults}}
-          <li>{{title}}</li>
+          <li tabindex="0">{{title}}</li>
         {{/each}}
       </ul>
 

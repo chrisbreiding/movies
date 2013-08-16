@@ -29,10 +29,10 @@ Movies.MovieEditController = Ember.ObjectController.extend
         @set 'noResults', !movies.length
 
   previousResult: ->
-    debugger
+    console.log 'previous result'
 
   nextResult: ->
-    debugger
+    console.log 'next result'
 
   save: ->
     # validate

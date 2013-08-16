@@ -62,7 +62,12 @@ input {
   border: solid 1px #c7c7c7;
   font-family: $font-default;
   font-size: 14px;
+  outline: none;
   padding: 6px 12px;
+
+  &:focus {
+    border-color: $base-color;
+  }
 }
 
 // ---- Views / Components ----
@@ -82,7 +87,7 @@ $shadow-box-inset: 20px;
 
 .shadow-box-container {
   background: #f8f8f8;
-  overflow-y: auto;
+  overflow: auto;
   position: absolute;
   top: $shadow-box-inset;
   right: $shadow-box-inset;
@@ -305,7 +310,6 @@ $toggle-height: 20px;
   }
 
   dd {
-    border-bottom: solid 1px #d3d3d3;
     margin-left: 0;
     min-height: 18px;
     padding: 10px 15px 10px 135px;
@@ -345,11 +349,14 @@ $toggle-height: 20px;
 
 .edit-movie {
   @extend .clearfix;
+  margin: 0 auto;
   padding: 15px 15px 50px;
+  width: 820px;
 
-  h2 input {
-    font-size: .7em;
-    width: 70%;
+  .edit-title {
+    display: block;
+    font-size: 1.3em;
+    width: 50%;
   }
 
   .edit-toggles,
@@ -377,7 +384,6 @@ $toggle-height: 20px;
 
     dd {
       @extend .clearfix;
-      border: none;
       padding: 10px 15px;
     }
 
@@ -403,7 +409,7 @@ $toggle-height: 20px;
       input {
         float: left;
         margin-right: 15px;
-        width: 220px
+        width: 220px;
       }
 
       .icon-button {
@@ -417,10 +423,13 @@ $toggle-height: 20px;
     }
 
     .rt-searching {
-      background: image-url("ajax-loader.gif") 50% 50% no-repeat;
+      // background: image-url("ajax-loader.gif") 50% 50% no-repeat;
+      color: $base-color;
       float: left;
-      width: 50px;
-      height: 30px;
+      font-size: 20px;
+      text-align: center;
+      width: 70px;
+      // height: 30px;
     }
 
     $rt-search-results-width: 244px;
@@ -435,7 +444,13 @@ $toggle-height: 20px;
       li {
         border-bottom: solid 1px #b3b3b3;
         font-size: .8em;
+        outline: none;
         padding: 3px 6px;
+
+        &:focus {
+          background: $base-color-dark;
+          color: #f8f8f8;
+        }
 
         button {
           background: none;
