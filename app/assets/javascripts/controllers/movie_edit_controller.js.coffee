@@ -28,11 +28,20 @@ Movies.MovieEditController = Ember.ObjectController.extend
         @set 'searchResults', movies
         @set 'noResults', !movies.length
 
-  previousResult: ->
-    console.log 'previous result'
-
-  nextResult: ->
-    console.log 'next result'
+  movieSelected: (movie)->
+    @set 'rt_id', movie.rt_id
+    @set 'year', movie.year
+    @set 'runtime', movie.runtime
+    @get('actors').setObjects []
+    movie.actors.forEach (actor)=>
+      @get('actors').pushObject Movies.Actor.createRecord(actor)
+    @set 'poster_detailed', movie.poster_detailed
+    @set 'poster_original', movie.poster_original
+    @set 'poster_profile', movie.poster_profile
+    @set 'poster_thumbnail', movie.poster_thumbnail
+    @set 'mpaa_rating', movie.mpaa_rating
+    @set 'critics_score', movie.critics_score
+    @set 'audience_score', movie.audience_score
 
   save: ->
     # validate

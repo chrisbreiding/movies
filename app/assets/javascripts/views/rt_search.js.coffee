@@ -2,18 +2,10 @@ Movies.RtSearchView = Ember.View.extend
 
   classNames: ['rt-search']
 
-  previous: (e)->
-    @get('controller').send 'previousResult'
-    @focusPrevious e
-
-  next: (e)->
-    @get('controller').send 'nextResult'
-    @focusNext e
-
   hasResults: ->
     @get('controller.searchResults') and (@get('controller.searchResults.length') > 0)
 
-  focusPrevious: (e)->
+  previous: (e)->
     el = $ e.target
     if el.is 'input'
       el.closest('form').siblings('ul').find('li').last().focus()
@@ -22,7 +14,7 @@ Movies.RtSearchView = Ember.View.extend
     else
       el.prevAll('li').first().focus()
 
-  focusNext: (e)->
+  next: (e)->
     el = $ e.target
     if el.is 'input'
       el.closest('form').siblings('ul').find('li').first().focus()

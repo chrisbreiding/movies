@@ -36,11 +36,15 @@ Movies.rottenTomatoes =
     request.then (response)->
       movies = response.movies
       movies.map (movie)->
+        actors = movie.abridged_cast.map (actor)->
+          rt_id: actor.id
+          name: actor.name
+
         title: movie.title
         rt_id: movie.id
         year: movie.year
         runtime: movie.runtime
-        actors: movie.abridged_cast
+        actors: actors
         poster_detailed: movie.posters.detailed
         poster_original: movie.posters.original
         poster_profile: movie.posters.profile

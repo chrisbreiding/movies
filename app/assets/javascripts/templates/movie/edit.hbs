@@ -41,7 +41,9 @@
 
       <ul>
         {{#each searchResults}}
-          <li tabindex="0">{{title}}</li>
+          {{#view Movies.RtSearchResult movieBinding="this"}}
+            {{title}}
+          {{/view}}
         {{/each}}
       </ul>
 
