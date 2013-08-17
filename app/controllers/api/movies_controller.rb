@@ -12,16 +12,15 @@ module Api
 
     def show
       render json: Movie.find(params[:id])
-      # respond_with Movie.includes(:genres).find(params[:id])
     end
 
     def create
       movie = Movie.new(params[:movie])
 
       if movie.save
-        respond_with movie
+        render json: movie
       else
-        respond_with movie.errors
+        render json: movie.errors
       end
     end
 
@@ -29,14 +28,14 @@ module Api
       movie = Movie.find(params[:id])
 
       if movie.update_attributes(params[:movie])
-        respond_with movie
+        render json: movie
       else
-        respond_with movie.errors
+        render json: movie.errors
       end
     end
 
     def search
-      respond_with Movie.where("title LIKE ?", "%#{params[:query]}%")
+      render json: Movie.where("title LIKE ?", "%#{params[:query]}%")
     end
 
   end

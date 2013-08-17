@@ -44,8 +44,8 @@ Movies.MovieEditController = Ember.ObjectController.extend
     @set 'audience_score', movie.audience_score
 
   save: ->
-    # validate
-    # commit changes
+    # need validations
+    @get('model').get('store').commit()
     @get('target').transitionTo 'movie'
 
   cancel: ->
