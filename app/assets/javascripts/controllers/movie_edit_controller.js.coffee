@@ -49,5 +49,4 @@ Movies.MovieEditController = Ember.ObjectController.extend
     @get('target').transitionTo 'movie'
 
   cancel: ->
-    # rollback changes
     @get('target').transitionTo 'movie'
